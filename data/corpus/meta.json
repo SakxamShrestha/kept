@@ -1,0 +1,88 @@
+{
+  "owner": {
+    "name": "Sam Okafor",
+    "email": "sam@okaforconsulting.com",
+    "role": "independent operations consultant, six active clients"
+  },
+  "today": "2026-09-23",
+  "people": [
+    {
+      "name": "Marcus Reed",
+      "email": "marcus@acmelogistics.com",
+      "org": "Acme Logistics",
+      "note": "slips deadlines, delivers partially"
+    },
+    {
+      "name": "Priya Raman",
+      "email": "priya@acmelogistics.com",
+      "org": "Acme Logistics",
+      "note": "reliable"
+    },
+    {
+      "name": "Dana Whitfield",
+      "email": "dana@northwind-health.org",
+      "org": "Northwind Health",
+      "note": "renegotiates rather than slipping"
+    },
+    {
+      "name": "Tomas Lindqvist",
+      "email": "tomas@brightpath.io",
+      "org": "Brightpath",
+      "note": "goes quiet, abandons threads"
+    },
+    {
+      "name": "Ana Belmonte",
+      "email": "ana@ridgeline-capital.com",
+      "org": "Ridgeline Capital",
+      "note": "supersedes her own asks"
+    },
+    {
+      "name": "Kwame Osei",
+      "email": "kwame@mercer-foods.com",
+      "org": "Mercer Foods",
+      "note": "delivers on time"
+    }
+  ],
+  "beats": [
+    {
+      "id": "vendor-shortlist",
+      "subject": "Vendor shortlist for the Q4 RFP",
+      "beat": "THE MONEY SHOT. Marcus promises the full vendor list by Sept 12. Sept 23 arrives with nothing. Then a partial list lands, and the row must move to partially_satisfied with the two missing items named."
+    },
+    {
+      "id": "northwind-renegotiation",
+      "subject": "Re: Staffing model draft",
+      "beat": "Dana renegotiates a date rather than slipping it. The original row must move to renegotiated, not abandoned, and the new date must come from the second message."
+    },
+    {
+      "id": "brightpath-silence",
+      "subject": "Integration spec",
+      "beat": "Tomas promises, then goes silent for six weeks. Row stays open and overdue - the ledger should NOT guess abandonment without evidence. This is the row the chase draft targets."
+    },
+    {
+      "id": "ridgeline-superseded",
+      "subject": "Diligence summary",
+      "beat": "Ana asks for a summary, then supersedes her own ask before Sam delivers. The first row must go to superseded, NOT satisfied - this is the distinction Nano conflates and Super gets right."
+    },
+    {
+      "id": "mercer-satisfied",
+      "subject": "Cold chain audit dates",
+      "beat": "Clean satisfaction. Kwame promises, Kwame delivers, row closes. The ledger needs at least one uneventful success or the demo looks like it only finds problems."
+    },
+    {
+      "id": "owed-by-me-overdue",
+      "subject": "Process map for the intake team",
+      "beat": "Sam is the one who is late. The ledger has to be uncomfortable in both directions or it is just a tool for blaming other people."
+    },
+    {
+      "id": "noise-conditionals",
+      "subject": "Re: Quarterly check-in",
+      "beat": "Pure adversarial noise. Every sentence here is a near-commitment that must NOT produce a ledger row: conditional offers, requests, pleasantries, and an already-done statement."
+    },
+    {
+      "id": "vague-but-real",
+      "subject": "Re: Invoice discrepancy",
+      "beat": "A deliberately vague but genuine promise. 'I'll look into it and get back to you' IS a commitment - the extractor must not require a crisp deliverable."
+    }
+  ]
+}

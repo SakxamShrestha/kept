@@ -1,0 +1,254 @@
+[
+  {
+    "id": "brightpath-silence-0@okaforconsulting.com",
+    "thread_id": "7867ac794e794668",
+    "from": "tomas@brightpath.io",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Integration spec",
+    "date_iso": "2026-08-12T13:02:00.000Z",
+    "body_text": "Sam,\n\nI'll put together the integration spec for the warehouse endpoints and get it to you next week. Should be straightforward.\n\nTomas"
+  },
+  {
+    "id": "brightpath-silence-1@okaforconsulting.com",
+    "thread_id": "7867ac794e794668",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "tomas@brightpath.io"
+    ],
+    "cc": [],
+    "subject": "Re: Integration spec",
+    "date_iso": "2026-08-26T10:15:00.000Z",
+    "body_text": "Tomas - checking in on the integration spec. Anything I can do to unblock it?\n\nSam"
+  },
+  {
+    "id": "owed-by-me-overdue-0@okaforconsulting.com",
+    "thread_id": "5ed650c4f8f3bab7",
+    "from": "priya@acmelogistics.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Process map for the intake team",
+    "date_iso": "2026-09-02T14:30:00.000Z",
+    "body_text": "Sam, when you have a moment - any chance you could share the process map for the intake team? Our new hires start the 21st.\n\nPriya"
+  },
+  {
+    "id": "owed-by-me-overdue-1@okaforconsulting.com",
+    "thread_id": "5ed650c4f8f3bab7",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "priya@acmelogistics.com"
+    ],
+    "cc": [],
+    "subject": "Re: Process map for the intake team",
+    "date_iso": "2026-09-02T18:10:00.000Z",
+    "body_text": "Of course. I'll have the process map over to you by the 12th, well ahead of the new starters.\n\nSam"
+  },
+  {
+    "id": "northwind-renegotiation-0@okaforconsulting.com",
+    "thread_id": "d953abf11a3b30b9",
+    "from": "dana@northwind-health.org",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Staffing model draft",
+    "date_iso": "2026-09-04T11:20:00.000Z",
+    "body_text": "Sam,\n\nI'll send you the staffing model draft by the 15th so you can fold it into the ops review.\n\nDana"
+  },
+  {
+    "id": "vendor-shortlist-0@okaforconsulting.com",
+    "thread_id": "faa805909d494b47",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "marcus@acmelogistics.com"
+    ],
+    "cc": [],
+    "subject": "Vendor shortlist for the Q4 RFP",
+    "date_iso": "2026-09-08T16:40:00.000Z",
+    "body_text": "Marcus,\n\nGood session this morning. To keep the RFP on track I need the full vendor list from your side so I can start scoring against the rubric.\n\nI'll have the scoring rubric itself over to you by Wednesday.\n\nSam"
+  },
+  {
+    "id": "vendor-shortlist-1@okaforconsulting.com",
+    "thread_id": "faa805909d494b47",
+    "from": "marcus@acmelogistics.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "date_iso": "2026-09-09T14:12:00.000Z",
+    "body_text": "Sam,\n\nThanks for the walkthrough yesterday. I'll get you the full vendor list by end of day Friday so you can start scoring them.\n\nHappy to loop in Priya on the procurement side if that's useful. Let's maybe sync sometime next month about the renewal too.\n\nMarcus"
+  },
+  {
+    "id": "vendor-shortlist-2@okaforconsulting.com",
+    "thread_id": "faa805909d494b47",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "marcus@acmelogistics.com"
+    ],
+    "cc": [],
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "date_iso": "2026-09-10T09:05:00.000Z",
+    "body_text": "Perfect. Attached is the scoring rubric as promised.\n\nSam"
+  },
+  {
+    "id": "mercer-satisfied-0@okaforconsulting.com",
+    "thread_id": "4bd7c674392ca4e9",
+    "from": "kwame@mercer-foods.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Cold chain audit dates",
+    "date_iso": "2026-09-11T12:00:00.000Z",
+    "body_text": "Sam,\n\nI'll confirm the cold chain audit dates with our three sites and send them across by Tuesday.\n\nKwame"
+  },
+  {
+    "id": "northwind-renegotiation-1@okaforconsulting.com",
+    "thread_id": "d953abf11a3b30b9",
+    "from": "dana@northwind-health.org",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Staffing model draft",
+    "date_iso": "2026-09-14T17:55:00.000Z",
+    "body_text": "Sam - the board moved our budget meeting, which changes the headcount assumptions in the model.\n\nRather than send you something I'll immediately revise, can we push the staffing model to the 29th? I'd rather give you one good version than two drafts.\n\nDana"
+  },
+  {
+    "id": "northwind-renegotiation-2@okaforconsulting.com",
+    "thread_id": "d953abf11a3b30b9",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "dana@northwind-health.org"
+    ],
+    "cc": [],
+    "subject": "Re: Staffing model draft",
+    "date_iso": "2026-09-15T08:30:00.000Z",
+    "body_text": "Works for me. The 29th still lands before the ops review.\n\nSam"
+  },
+  {
+    "id": "mercer-satisfied-1@okaforconsulting.com",
+    "thread_id": "4bd7c674392ca4e9",
+    "from": "kwame@mercer-foods.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Cold chain audit dates",
+    "date_iso": "2026-09-15T10:22:00.000Z",
+    "body_text": "Dates confirmed, all three sites:\n\nRiverton - Oct 6\nEastgate - Oct 8\nCaldwell - Oct 13\n\nKwame"
+  },
+  {
+    "id": "ridgeline-superseded-0@okaforconsulting.com",
+    "thread_id": "9af979abcaa002c9",
+    "from": "ana@ridgeline-capital.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Diligence summary",
+    "date_iso": "2026-09-16T15:40:00.000Z",
+    "body_text": "Sam,\n\nCould you pull together a diligence summary on the Mercer deal? Two pages is plenty.\n\nAna"
+  },
+  {
+    "id": "ridgeline-superseded-1@okaforconsulting.com",
+    "thread_id": "9af979abcaa002c9",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "ana@ridgeline-capital.com"
+    ],
+    "cc": [],
+    "subject": "Re: Diligence summary",
+    "date_iso": "2026-09-16T16:02:00.000Z",
+    "body_text": "Will do - I'll have the diligence summary to you Friday.\n\nSam"
+  },
+  {
+    "id": "vague-but-real-0@okaforconsulting.com",
+    "thread_id": "cc01e9280fbe78c6",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "kwame@mercer-foods.com"
+    ],
+    "cc": [],
+    "subject": "Re: Invoice discrepancy",
+    "date_iso": "2026-09-17T09:00:00.000Z",
+    "body_text": "Kwame - the August invoice shows two site visits that I don't have in my records. Could you check?\n\nSam"
+  },
+  {
+    "id": "vague-but-real-1@okaforconsulting.com",
+    "thread_id": "cc01e9280fbe78c6",
+    "from": "kwame@mercer-foods.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Invoice discrepancy",
+    "date_iso": "2026-09-17T13:45:00.000Z",
+    "body_text": "Odd. I'll look into it with our finance team and get back to you.\n\nKwame"
+  },
+  {
+    "id": "ridgeline-superseded-2@okaforconsulting.com",
+    "thread_id": "9af979abcaa002c9",
+    "from": "ana@ridgeline-capital.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Diligence summary",
+    "date_iso": "2026-09-18T09:12:00.000Z",
+    "body_text": "Sam, hold off on the diligence summary. The committee pushed Mercer to the November cycle, so it's not needed now.\n\nWhat I do need instead is the comparables table, by the 25th if you can manage it.\n\nAna"
+  },
+  {
+    "id": "ridgeline-superseded-3@okaforconsulting.com",
+    "thread_id": "9af979abcaa002c9",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "ana@ridgeline-capital.com"
+    ],
+    "cc": [],
+    "subject": "Re: Diligence summary",
+    "date_iso": "2026-09-18T09:40:00.000Z",
+    "body_text": "Understood, shelving the summary. I'll get you the comparables table by the 25th.\n\nSam"
+  },
+  {
+    "id": "noise-conditionals-0@okaforconsulting.com",
+    "thread_id": "dc6726bf689e704d",
+    "from": "priya@acmelogistics.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Quarterly check-in",
+    "date_iso": "2026-09-19T11:05:00.000Z",
+    "body_text": "Sam,\n\nGreat to catch up yesterday. A few follow-ups:\n\nHappy to introduce you to our Rotterdam team if that would be useful.\n\nAttached is the org chart you asked about.\n\nCould you send over your availability for October? No rush.\n\nWe should probably revisit the SLA language at some point.\n\nLet's maybe grab lunch when you're next in the city.\n\nPriya"
+  },
+  {
+    "id": "noise-conditionals-1@okaforconsulting.com",
+    "thread_id": "dc6726bf689e704d",
+    "from": "sam@okaforconsulting.com",
+    "to": [
+      "priya@acmelogistics.com"
+    ],
+    "cc": [],
+    "subject": "Re: Quarterly check-in",
+    "date_iso": "2026-09-19T15:22:00.000Z",
+    "body_text": "Thanks Priya, all noted. The org chart is helpful.\n\nIf the Rotterdam intro makes sense after the RFP closes I'll take you up on it.\n\nSam"
+  },
+  {
+    "id": "vendor-shortlist-3@okaforconsulting.com",
+    "thread_id": "faa805909d494b47",
+    "from": "marcus@acmelogistics.com",
+    "to": [
+      "sam@okaforconsulting.com"
+    ],
+    "cc": [],
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "date_iso": "2026-09-22T18:47:00.000Z",
+    "body_text": "Sam - apologies for the delay here. Sending over what I have so far: eleven of the thirteen vendors, attached.\n\nStill chasing Delacroix Freight and Halvorsen Group, their paperwork is stuck with our legal team. I will get you those two by Thursday.\n\nMarcus"
+  }
+]
