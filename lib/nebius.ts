@@ -24,10 +24,13 @@ const CACHE_DIR = path.join(process.cwd(), "data", "cache");
 
 /** Logical job a call performs. Cache keys are namespaced by this, so swapping
  *  the underlying model does not orphan a cached demo response. */
-export type Role = "extract" | "reconcile" | "draft";
+export type Role = "gate" | "extract" | "reconcile" | "draft";
 
 const CHAINS: Record<Role, string> = {
-  extract: process.env.MODEL_EXTRACT ?? "nvidia/nemotron-3-nano-30b-a3b",
+  // The cheap high-recall pre-filter. Nano is the right size here precisely
+  // because over-flagging is harmless at this stage.
+  gate: process.env.MODEL_GATE ?? "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  extract: process.env.MODEL_EXTRACT ?? "nvidia/nemotron-3-super-120b-a12b",
   reconcile: process.env.MODEL_RECONCILE ?? "nvidia/nemotron-3-super-120b-a12b",
   draft: process.env.MODEL_RECONCILE ?? "nvidia/nemotron-3-super-120b-a12b",
 };
@@ -87,6 +90,7 @@ export interface ChatOptions {
   maxTokens?: number;
   /** Skip the disk cache for this call (used by "Run now" in the UI). */
   noCache?: boolean;
+  seed?: number;
 }
 
 export interface ChatResult<T = unknown> {
@@ -179,6 +183,11 @@ export async function chat<T = unknown>(opts: ChatOptions): Promise<ChatResult<T
       messages: opts.messages,
       temperature: opts.temperature ?? 0,
       max_tokens: opts.maxTokens ?? 4096,
+      // temperature 0 alone is not reproducible on an MoE backend - the same
+      // reconcile prompt produced a transition on one run and none on the next.
+      // Token Factory accepts seed, so pin it and stop the committed ledger
+      // changing shape between builds.
+      seed: opts.seed ?? 7,
     };
     const effort = safeEffort(model, opts.reasoningEffort);
     if (effort) body.reasoning_effort = effort;

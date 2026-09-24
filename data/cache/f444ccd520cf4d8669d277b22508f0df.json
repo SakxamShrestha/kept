@@ -1,0 +1,35 @@
+{
+  "data": {
+    "transitions": [
+      {
+        "commitment_id": "c003",
+        "new_state": "satisfied",
+        "evidence_quote": "Attached is the scoring rubric as promised.",
+        "rationale": "Email confirms delivery of the scoring rubric, satisfying the commitment.",
+        "new_due_text": ""
+      }
+    ]
+  },
+  "raw": "{\"transitions\": [{\"commitment_id\": \"c003\", \"new_state\": \"satisfied\", \"evidence_quote\": \"Attached is the scoring rubric as promised.\", \"rationale\": \"Email confirms delivery of the scoring rubric, satisfying the commitment.\", \"new_due_text\": \"\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 193,
+    "prompt_tokens": 848,
+    "total_tokens": 1041,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 120,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 848
+  }
+}

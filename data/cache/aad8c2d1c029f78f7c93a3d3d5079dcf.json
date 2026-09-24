@@ -1,0 +1,35 @@
+{
+  "data": {
+    "transitions": [
+      {
+        "commitment_id": "c006",
+        "new_state": "superseded",
+        "evidence_quote": "hold off on the diligence summary",
+        "rationale": "Ana explicitly told Sam to hold off on the diligence summary, indicating it is no longer needed and thus cancelled before delivery.",
+        "new_due_text": ""
+      }
+    ]
+  },
+  "raw": "{\"transitions\": [{\"commitment_id\": \"c006\", \"new_state\": \"superseded\", \"evidence_quote\": \"hold off on the diligence summary\", \"rationale\": \"Ana explicitly told Sam to hold off on the diligence summary, indicating it is no longer needed and thus cancelled before delivery.\", \"new_due_text\": \"\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 415,
+    "prompt_tokens": 954,
+    "total_tokens": 1369,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 332,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 954
+  }
+}

@@ -51,12 +51,29 @@ export function resolveDue(dueText: string, statedAt: string): string | null {
 
 export type Overdue = { overdue: boolean; daysLate: number };
 
+/**
+ * Overdue is counted in CALENDAR days, not elapsed milliseconds.
+ *
+ * A deadline of "by the 12th" resolves with the originating message's
+ * time-of-day attached, so a millisecond diff against the 23rd floors to 10
+ * days rather than 11. Users count dates on a calendar; a ledger that says "10
+ * days overdue" for Sept 12 to Sept 23 looks broken even though the arithmetic
+ * is defensible.
+ */
 export function overdueAs(dueIso: string | null, asOf: string): Overdue {
   if (!dueIso) return { overdue: false, daysLate: 0 };
-  const due = new Date(dueIso).getTime();
-  const now = new Date(asOf).getTime();
+
+  const dayOf = (iso: string) => {
+    const d = new Date(iso);
+    return Number.isNaN(d.getTime())
+      ? NaN
+      : Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+  };
+
+  const due = dayOf(dueIso);
+  const now = dayOf(asOf);
   if (Number.isNaN(due) || Number.isNaN(now) || now <= due) {
     return { overdue: false, daysLate: 0 };
   }
-  return { overdue: true, daysLate: Math.floor((now - due) / 86_400_000) };
+  return { overdue: true, daysLate: Math.round((now - due) / 86_400_000) };
 }

@@ -1,0 +1,36 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "marcus@acmelogistics.com",
+        "what": "get the two vendors' paperwork",
+        "due_text": "by Thursday",
+        "confidence": 0.95,
+        "evidence_quote": "I will get you those two by Thursday."
+      }
+    ]
+  },
+  "raw": "{\"commitments\": [{\"direction\": \"owed_to_me\", \"counterparty\": \"marcus@acmelogistics.com\", \"what\": \"get the two vendors' paperwork\", \"due_text\": \"by Thursday\", \"confidence\": 0.95, \"evidence_quote\": \"I will get you those two by Thursday.\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 223,
+    "prompt_tokens": 1102,
+    "total_tokens": 1325,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 143,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1102
+  }
+}

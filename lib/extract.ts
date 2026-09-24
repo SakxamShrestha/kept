@@ -227,6 +227,33 @@ function cleanDue(due: string, msg: Message): string {
   return flat.includes(d.toLowerCase()) ? d : "";
 }
 
+/**
+ * When the owner is the one promising, the model often leaves counterparty
+ * blank - from inside the sentence "I'll have the process map over to you"
+ * there is no name to copy. The mailbox knows who "you" is, so fill it from the
+ * envelope rather than shipping a ledger row that says you owe nobody.
+ */
+function inferCounterparty(
+  direction: Direction,
+  msg: Message,
+  ownerAddresses: string[],
+): string {
+  const owners = ownerAddresses.map((a) => a.toLowerCase());
+  const senderIsOwner = owners.includes(msg.from.toLowerCase());
+
+  if (direction === "owed_by_me") {
+    // The owner promised: the counterparty is whoever they were writing to.
+    const recipient = msg.to.find((a) => !owners.includes(a.toLowerCase()));
+    return recipient ?? msg.to[0] ?? msg.from;
+  }
+  // Someone else promised: it is the sender, unless the owner sent the message
+  // describing someone else's promise.
+  if (senderIsOwner) {
+    return msg.to.find((a) => !owners.includes(a.toLowerCase())) ?? msg.to[0] ?? "";
+  }
+  return msg.from;
+}
+
 export interface ExtractResult {
   commitments: ExtractedCommitment[];
   /** Quotes the model could not ground in the source. Surfaced rather than
@@ -259,6 +286,7 @@ export async function extractFromMessage(
   return {
     commitments: kept.map((c) => ({
       ...c,
+      counterparty: c.counterparty?.trim() || inferCounterparty(c.direction, msg, ownerAddresses),
       message_id: msg.id,
       thread_id: msg.thread_id,
       stated_at: msg.date_iso,

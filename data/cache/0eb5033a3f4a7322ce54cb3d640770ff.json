@@ -1,0 +1,36 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "kwame@mercer-foods.com",
+        "what": "look into it with our finance team and get back to you",
+        "due_text": "",
+        "confidence": 85,
+        "evidence_quote": "Odd. I'll look into it with our finance team and get back to you."
+      }
+    ]
+  },
+  "raw": "{\"commitments\": [{\"direction\": \"owed_to_me\", \"counterparty\": \"kwame@mercer-foods.com\", \"what\": \"look into it with our finance team and get back to you\", \"due_text\": \"\", \"confidence\": 85, \"evidence_quote\": \"Odd. I'll look into it with our finance team and get back to you.\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 154,
+    "prompt_tokens": 1056,
+    "total_tokens": 1210,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 64,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1056
+  }
+}

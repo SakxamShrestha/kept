@@ -1,0 +1,36 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_by_me",
+        "counterparty": "",
+        "what": "have the process map over to you",
+        "due_text": "by the 12th",
+        "confidence": 0.95,
+        "evidence_quote": "I'll have the process map over to you by the 12th"
+      }
+    ]
+  },
+  "raw": "{\"commitments\": [{\"direction\": \"owed_by_me\", \"counterparty\": \"\", \"what\": \"have the process map over to you\", \"due_text\": \"by the 12th\", \"confidence\": 0.95, \"evidence_quote\": \"I'll have the process map over to you by the 12th\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 1053,
+    "total_tokens": 1147,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1053
+  }
+}

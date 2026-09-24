@@ -1,0 +1,35 @@
+{
+  "data": {
+    "transitions": [
+      {
+        "commitment_id": "c005",
+        "new_state": "satisfied",
+        "evidence_quote": "Dates confirmed, all three sites:\n\nRiverton - Oct 6\nEastgate - Oct 8\nCaldwell - Oct 13\n\nKwame",
+        "rationale": "Email provides the confirmed dates for all three sites, fulfilling the commitment to confirm and send them across.",
+        "new_due_text": ""
+      }
+    ]
+  },
+  "raw": "{\"transitions\": [{\"commitment_id\": \"c005\", \"new_state\": \"satisfied\", \"evidence_quote\": \"Dates confirmed, all three sites:\\n\\nRiverton - Oct 6\\nEastgate - Oct 8\\nCaldwell - Oct 13\\n\\nKwame\", \"rationale\": \"Email provides the confirmed dates for all three sites, fulfilling the commitment to confirm and send them across.\", \"new_due_text\": \"\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 579,
+    "prompt_tokens": 874,
+    "total_tokens": 1453,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 471,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 874
+  }
+}

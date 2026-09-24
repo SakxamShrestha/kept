@@ -1,0 +1,36 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "dana@northwind-health.org",
+        "what": "send the staffing model draft",
+        "due_text": "by the 15th",
+        "confidence": 1,
+        "evidence_quote": "I'll send you the staffing model draft by the 15th so you can fold it into the ops review."
+      }
+    ]
+  },
+  "raw": "{\"commitments\": [{\"direction\": \"owed_to_me\", \"counterparty\": \"dana@northwind-health.org\", \"what\": \"send the staffing model draft\", \"due_text\": \"by the 15th\", \"confidence\": 1.0, \"evidence_quote\": \"I'll send you the staffing model draft by the 15th so you can fold it into the ops review.\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 161,
+    "prompt_tokens": 1066,
+    "total_tokens": 1227,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 63,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1066
+  }
+}

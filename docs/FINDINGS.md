@@ -160,3 +160,58 @@ that reaches the ledger.
   code.
 
 Neither was fixed by asking more firmly in the prompt. Both needed enforcement.
+
+## 8. The cascade works: 100% gate recall, 55% of calls avoided
+
+Day 1 said extraction needs Super, not Nano. But Nano's failure mode is
+over-extraction, and ~89% of real messages contain no commitment at all — so
+most Super calls are spent confirming there is nothing there. That is a cascade,
+not a dead end.
+
+Nano runs a binary "does this contain any commitment?" gate at
+`reasoning_effort: "low"`, prompted with an explicit asymmetry: *a false yes
+costs one call, a false no loses a commitment permanently, so when unsure say
+yes.*
+
+Measured over the same 150 Enron messages, against Super's own extractions as
+ground truth:
+
+| | |
+|---|---|
+| Recall (commitments not hidden from Super) | **100.0%** (19/19) |
+| False positive rate | 36.6% (48/131) |
+| Super calls avoided | **55.3%** |
+
+The gate never dropped a message that had a commitment. A third of the messages
+it passes through turn out to be empty, which is exactly the tradeoff the prompt
+asks for and costs only a call.
+
+So both models earn their place, and the split is now backed by two
+measurements rather than an assumption: Nano is the cheap high-recall filter,
+Super is the precise judge behind it.
+
+## 9. `seed` is accepted but does not make output reproducible
+
+Token Factory accepts a `seed` parameter on `/v1/chat/completions` (HTTP 200,
+no error). It does not deliver reproducibility.
+
+With `temperature: 0` and `seed: 7` pinned, the same reconciliation prompt over
+the same 21-message corpus produced different ledgers across consecutive builds:
+one run marked the scoring-rubric commitment `satisfied`, the next left it
+`open`; one run emitted two `renegotiated` transitions for the same row, the
+next emitted one. Extraction was noticeably more stable than reconciliation —
+three consecutive no-cache runs on the same message returned identical output —
+which suggests the variance grows with the number of candidate rows in context.
+
+This is expected behavior for an MoE backend under batching, but it is worth
+stating plainly because `seed` implies a guarantee it does not provide.
+
+**How this project handles it:** the ledger is a build artifact, not a runtime
+computation. It is built once, gated by `npm run test:ledger` (21 acceptance
+assertions), and committed. Variance therefore only matters at rebuild time,
+where a test failure catches it.
+
+A secondary lesson, learned the hard way: acceptance tests must assert on
+structure, not phrasing. A test matching the literal string `"those two"` failed
+on a build where the model wrote `"the two vendors' paperwork"` — a correct
+result, a broken test.

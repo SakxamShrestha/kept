@@ -1,0 +1,15 @@
+{
+  "data": {
+    "has_commitment": true
+  },
+  "raw": "{ \"has_commitment\": true }",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 253,
+    "total_tokens": 310,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "c000",
+    "direction": "owed_to_me",
+    "counterparty": "tomas@brightpath.io",
+    "what": "put together the integration spec for the warehouse endpoints",
+    "due_text": "next week",
+    "due_iso": "2026-08-19T13:02:00.000Z",
+    "confidence": 0.95,
+    "state": "open",
+    "origin": {
+      "message_id": "brightpath-silence-0@okaforconsulting.com",
+      "thread_id": "7867ac794e794668",
+      "quote": "I'll put together the integration spec for the warehouse endpoints and get it to you next week.",
+      "at": "2026-08-12T13:02:00.000Z"
+    },
+    "history": []
+  },
+  {
+    "id": "c003",
+    "direction": "owed_to_me",
+    "counterparty": "sam@okaforconsulting.com",
+    "what": "have the scoring rubric itself over to you",
+    "due_text": "by Wednesday",
+    "due_iso": "2026-09-09T17:00:00.000Z",
+    "confidence": 1,
+    "state": "satisfied",
+    "origin": {
+      "message_id": "vendor-shortlist-0@okaforconsulting.com",
+      "thread_id": "faa805909d494b47",
+      "quote": "I'll have the scoring rubric itself over to you by Wednesday.",
+      "at": "2026-09-08T16:40:00.000Z"
+    },
+    "history": [
+      {
+        "state": "satisfied",
+        "at": "2026-09-10T09:05:00.000Z",
+        "evidence_message_id": "vendor-shortlist-2@okaforconsulting.com",
+        "evidence_quote": "Attached is the scoring rubric as promised.",
+        "rationale": "Email confirms delivery of the scoring rubric, satisfying the commitment."
+      }
+    ]
+  },
+  {
+    "id": "c004",
+    "direction": "owed_to_me",
+    "counterparty": "marcus@acmelogistics.com",
+    "what": "get you the full vendor list",
+    "due_text": "by end of day Friday",
+    "due_iso": "2026-09-11T17:00:00.000Z",
+    "confidence": 1,
+    "state": "partially_satisfied",
+    "origin": {
+      "message_id": "vendor-shortlist-1@okaforconsulting.com",
+      "thread_id": "faa805909d494b47",
+      "quote": "I'll get you the full vendor list by end of day Friday",
+      "at": "2026-09-09T14:12:00.000Z"
+    },
+    "history": [
+      {
+        "state": "partially_satisfied",
+        "at": "2026-09-22T18:47:00.000Z",
+        "evidence_message_id": "vendor-shortlist-3@okaforconsulting.com",
+        "evidence_quote": "Sending over what I have so far: eleven of the thirteen vendors, attached.\n\nStill chasing Delacroix Freight and Halvorsen Group, their paperwork is stuck with our legal team. I will get you those two by Thursday.",
+        "rationale": "Marcus reports having sent eleven of thirteen vendors and is still chasing the remaining two, indicating partial fulfillment."
+      }
+    ]
+  },
+  {
+    "id": "c001",
+    "direction": "owed_by_me",
+    "counterparty": "priya@acmelogistics.com",
+    "what": "have the process map over to you",
+    "due_text": "by the 12th",
+    "due_iso": "2026-09-12T18:10:00.000Z",
+    "confidence": 0.95,
+    "state": "open",
+    "origin": {
+      "message_id": "owed-by-me-overdue-1@okaforconsulting.com",
+      "thread_id": "5ed650c4f8f3bab7",
+      "quote": "I'll have the process map over to you by the 12th",
+      "at": "2026-09-02T18:10:00.000Z"
+    },
+    "history": []
+  },
+  {
+    "id": "c005",
+    "direction": "owed_to_me",
+    "counterparty": "kwame@mercer-foods.com",
+    "what": "confirm the cold chain audit dates with our three sites and send them across",
+    "due_text": "by Tuesday",
+    "due_iso": "2026-09-15T17:00:00.000Z",
+    "confidence": 0.95,
+    "state": "satisfied",
+    "origin": {
+      "message_id": "mercer-satisfied-0@okaforconsulting.com",
+      "thread_id": "4bd7c674392ca4e9",
+      "quote": "I'll confirm the cold chain audit dates with our three sites and send them across by Tuesday.",
+      "at": "2026-09-11T12:00:00.000Z"
+    },
+    "history": [
+      {
+        "state": "satisfied",
+        "at": "2026-09-15T10:22:00.000Z",
+        "evidence_message_id": "mercer-satisfied-1@okaforconsulting.com",
+        "evidence_quote": "Dates confirmed, all three sites:\n\nRiverton - Oct 6\nEastgate - Oct 8\nCaldwell - Oct 13\n\nKwame",
+        "rationale": "Email provides the confirmed dates for all three sites, fulfilling the commitment to confirm and send them across."
+      }
+    ]
+  },
+  {
+    "id": "c006",
+    "direction": "owed_by_me",
+    "counterparty": "ana@ridgeline-capital.com",
+    "what": "have the diligence summary to you",
+    "due_text": "Friday",
+    "due_iso": "2026-09-18T17:00:00.000Z",
+    "confidence": 0.85,
+    "state": "superseded",
+    "origin": {
+      "message_id": "ridgeline-superseded-1@okaforconsulting.com",
+      "thread_id": "9af979abcaa002c9",
+      "quote": "Will do - I'll have the diligence summary to you Friday.",
+      "at": "2026-09-16T16:02:00.000Z"
+    },
+    "history": [
+      {
+        "state": "superseded",
+        "at": "2026-09-18T09:12:00.000Z",
+        "evidence_message_id": "ridgeline-superseded-2@okaforconsulting.com",
+        "evidence_quote": "hold off on the diligence summary",
+        "rationale": "Ana explicitly told Sam to hold off on the diligence summary, indicating it is no longer needed and thus cancelled before delivery."
+      }
+    ]
+  },
+  {
+    "id": "c009",
+    "direction": "owed_to_me",
+    "counterparty": "marcus@acmelogistics.com",
+    "what": "get the two vendors' paperwork",
+    "due_text": "by Thursday",
+    "due_iso": "2026-09-24T17:00:00.000Z",
+    "confidence": 0.95,
+    "state": "open",
+    "origin": {
+      "message_id": "vendor-shortlist-3@okaforconsulting.com",
+      "thread_id": "faa805909d494b47",
+      "quote": "I will get you those two by Thursday.",
+      "at": "2026-09-22T18:47:00.000Z"
+    },
+    "history": []
+  },
+  {
+    "id": "c008",
+    "direction": "owed_by_me",
+    "counterparty": "ana@ridgeline-capital.com",
+    "what": "get you the comparables table",
+    "due_text": "by the 25th",
+    "due_iso": "2026-09-25T09:40:00.000Z",
+    "confidence": 1,
+    "state": "open",
+    "origin": {
+      "message_id": "ridgeline-superseded-3@okaforconsulting.com",
+      "thread_id": "9af979abcaa002c9",
+      "quote": "I'll get you the comparables table by the 25th.",
+      "at": "2026-09-18T09:40:00.000Z"
+    },
+    "history": []
+  },
+  {
+    "id": "c002",
+    "direction": "owed_to_me",
+    "counterparty": "dana@northwind-health.org",
+    "what": "send the staffing model draft",
+    "due_text": "the 29th",
+    "due_iso": "2026-09-29T17:55:00.000Z",
+    "confidence": 1,
+    "state": "open",
+    "origin": {
+      "message_id": "northwind-renegotiation-0@okaforconsulting.com",
+      "thread_id": "d953abf11a3b30b9",
+      "quote": "I'll send you the staffing model draft by the 15th so you can fold it into the ops review.",
+      "at": "2026-09-04T11:20:00.000Z"
+    },
+    "history": [
+      {
+        "state": "renegotiated",
+        "at": "2026-09-14T17:55:00.000Z",
+        "evidence_message_id": "northwind-renegotiation-1@okaforconsulting.com",
+        "evidence_quote": "can we push the staffing model to the 29th?",
+        "rationale": "Both parties agreed to move the deadline."
+      }
+    ]
+  },
+  {
+    "id": "c007",
+    "direction": "owed_to_me",
+    "counterparty": "kwame@mercer-foods.com",
+    "what": "look into it with our finance team and get back to you",
+    "due_text": "",
+    "due_iso": null,
+    "confidence": 0.85,
+    "state": "open",
+    "origin": {
+      "message_id": "vague-but-real-1@okaforconsulting.com",
+      "thread_id": "cc01e9280fbe78c6",
+      "quote": "Odd. I'll look into it with our finance team and get back to you.",
+      "at": "2026-09-17T13:45:00.000Z"
+    },
+    "history": []
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "tomas@brightpath.io",
+        "what": "put together the integration spec for the warehouse endpoints",
+        "due_text": "next week",
+        "confidence": 95,
+        "evidence_quote": "I'll put together the integration spec for the warehouse endpoints and get it to you next week."
+      }
+    ]
+  },
+  "raw": "{\"commitments\": [{\"direction\": \"owed_to_me\", \"counterparty\": \"tomas@brightpath.io\", \"what\": \"put together the integration spec for the warehouse endpoints\", \"due_text\": \"next week\", \"confidence\": 95, \"evidence_quote\": \"I'll put together the integration spec for the warehouse endpoints and get it to you next week.\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 129,
+    "prompt_tokens": 1058,
+    "total_tokens": 1187,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 43,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1058
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data": {
+    "transitions": [
+      {
+        "commitment_id": "c004",
+        "new_state": "partially_satisfied",
+        "evidence_quote": "Sending over what I have so far: eleven of the thirteen vendors, attached.\n\nStill chasing Delacroix Freight and Halvorsen Group, their paperwork is stuck with our legal team. I will get you those two by Thursday.",
+        "rationale": "Marcus reports having sent eleven of thirteen vendors and is still chasing the remaining two, indicating partial fulfillment.",
+        "new_due_text": ""
+      }
+    ]
+  },
+  "raw": "{\"transitions\": [{\"commitment_id\": \"c004\", \"new_state\": \"partially_satisfied\", \"evidence_quote\": \"Sending over what I have so far: eleven of the thirteen vendors, attached.\\n\\nStill chasing Delacroix Freight and Halvorsen Group, their paperwork is stuck with our legal team. I will get you those two by Thursday.\", \"rationale\": \"Marcus reports having sent eleven of thirteen vendors and is still chasing the remaining two, indicating partial fulfillment.\", \"new_due_text\": \"\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1241,
+    "prompt_tokens": 974,
+    "total_tokens": 2215,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1118,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 974
+  }
+}
