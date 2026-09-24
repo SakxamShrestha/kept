@@ -1,0 +1,1204 @@
+[
+  {
+    "message": {
+      "id": "9467800.1075853070733.JavaMail.evans@thyme",
+      "thread_id": "90626a1df6428205",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "janet.mcdaniel@enron.com",
+        "terry.kowalke@enron.com"
+      ],
+      "cc": [
+        "robert.benningfield@enron.com",
+        "tangie.dykes@enron.com",
+        "sherry.forbish@enron.com",
+        "chris.greaney@enron.com",
+        "randy.janzen@enron.com",
+        "debra.jasper@enron.com",
+        "joe.linhart@enron.com",
+        "kathy.sturr@enron.com",
+        "harry.woodson@enron.com",
+        "jean.adams@enron.com"
+      ],
+      "subject": "Re: Bushton Plant down 5/26-27",
+      "date_iso": "2001-05-29T16:00:00+00:00",
+      "body_text": "I am very interested in how they are going to \"fix Saturday\" on Tuesday.  We cannot go back in and adjust noms or scheduled volumes.\nPlease let me know the results of thier adjustments.  Thanks. Lynn\n\nJanet McDaniel\n05/28/2001 05:30 PM\nTo:\tRobert Benningfield/ET&S/Enron@ENRON, Tangie Dykes/ET&S/Enron@ENRON, Sherry Forbish/ET&S/Enron@ENRON, Chris Greaney/ET&S/Enron@ENRON, Randy Janzen/ET&S/Enron@ENRON, Debra Jasper/ET&S/Enron@ENRON, Joe Linhart/ET&S/Enron@ENRON, Kathy Sturr/ET&S/Enron@ENRON, Harry Woodson/ET&S/Enron@ENRON, Jean Adams/ET&S/Enron@ENRON, Lynn Blair/ET&S/Enron@ENRON\ncc:\n\nSubject:\tBushton Plant down 5/26-27\n\nTeam,\n\nThe Bushton plant went down for abt. 24 hours from the morning of 5/26 until the morning of 5/27.  I talked with Jimmie Mosher and she said they will correct noms. for the differences on those days when everyone is back in the office on Tuesday.\n\nThe plant did not notify her that there was a problem, so a timely fix was not an option.  They called our gas control.  I found out when I did the reports for the 26th on Monday, the 28th.\n\nJanet"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "",
+    "error": "Unexpected end of JSON input"
+  },
+  {
+    "message": {
+      "id": "22590123.1075853071752.JavaMail.evans@thyme",
+      "thread_id": "f392bc43bfd4982a",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "mary.darveaux@enron.com"
+      ],
+      "cc": [],
+      "subject": "Oneok Fined for Contempt by OCC Judge",
+      "date_iso": "2001-06-05T17:48:00+00:00",
+      "body_text": "Mary, you probably saw this, but thought you might find it interesting.  Thank.s Lynn"
+    },
+    "commitments": [],
+    "rejected": [
+      {
+        "direction": "owed_by_me",
+        "counterparty": "mary.darveaux@enron.com",
+        "what": "",
+        "due_text": "",
+        "confidence": 0,
+        "evidence_quote": ""
+      }
+    ],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "766217.1075853071801.JavaMail.evans@thyme",
+      "thread_id": "d3a2b9c0bcb3ee48",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "nancy.carpenter@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: Reorganization",
+      "date_iso": "2001-06-05T21:22:00+00:00",
+      "body_text": "Nancy, I can go either way.  If you guys want to meet and then I can catch up with\nDonna that is fine.  I just wanted to be sure we got you the answers you needed.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "17848996.1075853071845.JavaMail.evans@thyme",
+      "thread_id": "7b1ba2375cf664a9",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "alma.martinez@enron.com"
+      ],
+      "cc": [],
+      "subject": "Diana's 25 Yr Banquet",
+      "date_iso": "2001-06-05T21:24:00+00:00",
+      "body_text": "Alma, how is this for Diana?  Is that enough?  Please call me if you need more.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "2094534.1075853071950.JavaMail.evans@thyme",
+      "thread_id": "897fcb57d9b98a03",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "raetta.zadow@enron.com"
+      ],
+      "cc": [],
+      "subject": "Re: Imbalance Cashout Priors",
+      "date_iso": "2001-06-06T16:08:00+00:00",
+      "body_text": "Raetta, were these valid?  Thanks. Lynn\n\nRaetta Zadow\n06/05/2001 08:02 AM\nTo:\tKathy Washington/ET&S/Enron@ENRON, Sherry Forbish/ET&S/Enron@ENRON, Lynn Blair/ET&S/Enron@ENRON, Dan Fancler/ET&S/Enron, Esther Dasilva/ET&S/Enron@ENRON, Raetta Zadow/ET&S/Enron@ENRON\ncc:\n\nSubject:\tImbalance Cashout Priors\n\nKathy/Sherry - as I was looking at the imbalance invoice log this morning, I noticed that IES Utilities has priors totaling $2,036,585.73 for the production months of 11/2000 thru 04/2001 and Owatonna Public Utilities has priors totaling $144,578.68 for the production months of 11/2000 thru 02/2001.  I just wanted to make sure that these were valid before we close priors tomorrow (6/6).  Let me know if these are not valid.\n\nThanks,\n\nRaetta\n\nKathy/Sherry - IES also has DDVC invoices for the same months totaling $6,068.55 and Owatonna has DDVC invoices for the same months totaling $160,246.75."
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "21550370.1075853073281.JavaMail.evans@thyme",
+      "thread_id": "8361a8c9569cbb30",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "robinhold@enron.com",
+        "brobinhold@ftenergy.com"
+      ],
+      "cc": [],
+      "subject": "Re: question about TW operational capacity",
+      "date_iso": "2001-06-18T03:41:00+00:00",
+      "body_text": "Brian, just wanted to follow up to be sure you had talked with\nToby Kuehl and he had answered all your questions.  If you have\nall your answers, you do not need to respond to this note.  Have\na great day.  Thanks. Lynn\n\n\"Robinhold, Brian\" <BRobinhold@ftenergy.com> on 06/08/2001 10:35:54 AM\nTo:\t\"'lynn.blair@enron.com'\" <lynn.blair@enron.com>\ncc:\n\nSubject:\tquestion about TW operational capacity\n\nI found your name on the site, I'm guessing you might be the best person to\nlob this question towards...\n\nI'm looking at operational capacity on this site\nhttp://www.tw.enron.com/twdb/etfr_avcap.html\nAnd I can input the gas day, for today or tomorrow.  But when I get results\nback it is ambiguous as to which cycle the gas is flowing in.  Are they all\nfor the timely cycle or are the evening and intraday cycles thrown in there\nas well.  And if they are thrown in there, do I just have to know WHEN the\ndifferent cycles are posted and use that as my guide (IE if I'm looking at\nresults around 14:00 those would be for intraday1 cycle)????\n\nAre you even the person I should ask?\n\nThanks,\nBrian Robinhold\nFT Energy\nbrobinhold@ftenergy.com\n720-548-5722"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "25606211.1075853074187.JavaMail.evans@thyme",
+      "thread_id": "374d60bdd8910b4a",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "william.aldinger@enron.com",
+        "marion.collins@enron.com",
+        "galen.coon@enron.com",
+        "tim.cooper@enron.com",
+        "lanny.cramer@enron.com",
+        "jack.howard@enron.com",
+        ".laferla@enron.com",
+        "mary.phillips@enron.com",
+        "cynthia.rivers@enron.com",
+        "jean.blair@enron.com",
+        "randy.bryan@enron.com",
+        "nancy.callans@enron.com",
+        "james.carr@enron.com",
+        "karen.clapper@enron.com",
+        "katherine.perry@enron.com",
+        "diana.porter@enron.com",
+        "shirley.walden@enron.com",
+        "kathy.washington@enron.com",
+        "jerry.wilkens@enron.com",
+        "jean.adams@enron.com",
+        "robert.benningfield@enron.com",
+        "tangie.dykes@enron.com",
+        "sherry.forbish@enron.com",
+        "chris.greaney@enron.com",
+        "scott.hibbard@enron.com",
+        "randy.janzen@enron.com",
+        "joe.linhart@enron.com",
+        "janet.mcdaniel@enron.com",
+        "debra.scurlock@enron.com",
+        "kathy.sturr@enron.com",
+        "harry.woodson@enron.com",
+        "laura.giambrone@enron.com",
+        "bert.hernandez@enron.com",
+        "christine.mcevoy@enron.com",
+        "beverly.miller@enron.com",
+        "tracy.minter@enron.com",
+        "amy.mulligan@enron.com",
+        "linda.ward@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com"
+      ],
+      "subject": "Astro Tickets",
+      "date_iso": "2001-06-28T19:03:11+00:00",
+      "body_text": "I have 4 tickets for the Astros game on Thursday,July 12 and 4 tickets for\n\tFriday, July 13th.\n\n\tDoes anyone have a customer they would like to take to the game either one\n\tone of those nights?  Please let me know ASAP.\n\n\tThanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "",
+    "error": "Expected property name or '}' in JSON at position 7513 (line 5635 column 2)"
+  },
+  {
+    "message": {
+      "id": "2219778.1075853074418.JavaMail.evans@thyme",
+      "thread_id": "2554614b8b815392",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "larry.berger@enron.com",
+        "lynn.blair@enron.com",
+        "michael.bodnar@enron.com",
+        "john.buchanan@enron.com",
+        "terry.kowalke@enron.com",
+        "raetta.zadow@enron.com",
+        "sharon.brown@enron.com",
+        "alma.carrillo@enron.com",
+        "ava.garcia@enron.com",
+        "ricki.winters@enron.com",
+        "jean.blair@enron.com",
+        "randy.bryan@enron.com",
+        "nancy.callans@enron.com",
+        "james.carr@enron.com",
+        "karen.clapper@enron.com",
+        "katherine.perry@enron.com",
+        "diana.porter@enron.com",
+        "shirley.walden@enron.com",
+        "kathy.washington@enron.com",
+        "jerry.wilkens@enron.com",
+        "shelley.corman@enron.com",
+        "rick.dietz@enron.com",
+        "bradley.holmes@enron.com",
+        "steven.january@enron.com",
+        "sheila.nacey@enron.com",
+        "donna.scott@enron.com",
+        "jean.adams@enron.com",
+        "robert.benningfield@enron.com",
+        "tangie.dykes@enron.com",
+        "sherry.forbish@enron.com",
+        "chris.greaney@enron.com",
+        "scott.hibbard@enron.com",
+        "randy.janzen@enron.com",
+        "joe.linhart@enron.com",
+        "janet.mcdaniel@enron.com",
+        "debra.scurlock@enron.com",
+        "kathy.sturr@enron.com",
+        "harry.woodson@enron.com",
+        "laura.giambrone@enron.com",
+        "bert.hernandez@enron.com",
+        "christine.mcevoy@enron.com",
+        "beverly.miller@enron.com",
+        "tracy.minter@enron.com",
+        "amy.mulligan@enron.com",
+        "linda.ward@enron.com"
+      ],
+      "cc": [
+        "ava.garcia@enron.com"
+      ],
+      "subject": "Ava Garcia - Out of Office",
+      "date_iso": "2001-07-02T21:33:33+00:00",
+      "body_text": "Just a reminder to let everyone know Ava is out of the office on vacation this week.\n\n\tShe will be returning on Monday, July 9th.  If you need administrative assistance,\n\tplease call Sharon Brown.\n\n\tThanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "12177489.1075853074715.JavaMail.evans@thyme",
+      "thread_id": "c14ec4c9f1f591f7",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "shelley.corman@enron.com",
+        "kimberly.watson@enron.com",
+        "lindy.donoho@enron.com",
+        "terry.kowalke@enron.com",
+        "steven.january@enron.com",
+        "tk.lohman@enron.com",
+        "ava.garcia@enron.com",
+        "donna.scott@enron.com"
+      ],
+      "cc": [
+        "bradley.holmes@enron.com",
+        "rick.dietz@enron.com",
+        "ricki.winters@enron.com",
+        "lynn.blair@enron.com",
+        "sharon.brown@enron.com",
+        "alma.carrillo@enron.com"
+      ],
+      "subject": "TW Customer Meeting - 10/23/01",
+      "date_iso": "2001-07-05T19:31:33+00:00",
+      "body_text": "There will be an update meeting on the status of the TW customer meeting on\n\tTuesday, July 10 at 1:00 p.m. in EB4194.\n\n\tThe meeting will focus on the following:\n\n\t\tFinalizing date - October 23 or October 24, 2001\n\t\tEnsuring everyone has seen the customer list\n\t\tBoat - Size\n\t\tMeals\n\t\tGifts\n\t\tAccess to training room in Enron Building on 5\n\t\tAgreement on invitation (Mark your Calendar) to be sent mid July\n\n\t\tStatus of Agenda\n\n\tThanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "shelley.corman@enron.com",
+        "what": "Agreement on invitation (Mark your Calendar) to be sent mid July",
+        "due_text": "mid July",
+        "confidence": 0.96,
+        "evidence_quote": "Agreement on invitation (Mark your Calendar) to be sent mid July",
+        "message_id": "12177489.1075853074715.JavaMail.evans@thyme",
+        "thread_id": "c14ec4c9f1f591f7",
+        "stated_at": "2001-07-05T19:31:33+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "5097717.1075853074812.JavaMail.evans@thyme",
+      "thread_id": "60f1dbf906e9528f",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "michael.sullivan@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: EDI files",
+      "date_iso": "2001-07-06T18:16:16+00:00",
+      "body_text": "Mike, thank you for the update.  My only concern now is the file Jeff\nsent us last night took 13 hours to load (I am not sure it ever loaded).\nI know Jeff is diligently working on this, hopefully he can get this fixed\nthis weekend.  Tammy has a call into Jeff to see if we need someone available\nthis weekend to help test.  Thanks again for your support and follow up."
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "24681886.1075853075219.JavaMail.evans@thyme",
+      "thread_id": "8c8a1dc66b6c42c0",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "terry.kowalke@enron.com",
+        "john.buchanan@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com"
+      ],
+      "subject": "Topics for Wednesday morning meeting",
+      "date_iso": "2001-07-10T23:51:28+00:00",
+      "body_text": "Here are a couple of things I want to be sure we discuss in the morning.\n\n\t\tTwo Associate Interviews - Bring to Houston\n\n\t\tPRC\n\n\t\tMy conversation with Brad about the Migration this weekend\n\t\tMeeting scheduled for Thursday\n\n\t\tPGAS concerns - Jodie taking lead with you and reps"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "Meeting scheduled for Thursday",
+        "due_text": "2001-07-11",
+        "confidence": 0.9,
+        "evidence_quote": "Meeting scheduled for Thursday",
+        "message_id": "24681886.1075853075219.JavaMail.evans@thyme",
+        "thread_id": "8c8a1dc66b6c42c0",
+        "stated_at": "2001-07-10T23:51:28+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "23031953.1075853075716.JavaMail.evans@thyme",
+      "thread_id": "ea1970bc2e9cf903",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "gina.taylor@enron.com"
+      ],
+      "cc": [],
+      "subject": "FW: Administrative Functions",
+      "date_iso": "2001-07-16T17:31:31+00:00",
+      "body_text": "Gina here is the spreadsheet I was talking to you about.  Sorry I failed\n\tto put your name on here.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "10943205.1075853076057.JavaMail.evans@thyme",
+      "thread_id": "bfd68a4e6b2e7b6c",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "shelley.corman@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: New cut code DCC",
+      "date_iso": "2001-07-18T22:31:36+00:00",
+      "body_text": "Shelley, the DCC (downstream capacity constraint) code was to acknowledge that the downstream is the\n\tconstraint vs our pipeline being the constraint.  We are working with Tammy and Donna to come up with existing codes to\n\tuse for Needles and Nigas.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "21619837.1075853076104.JavaMail.evans@thyme",
+      "thread_id": "b840c79b7de93949",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "rick.dietz@enron.com",
+        "bradley.holmes@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: 7/18/01 Update RE: Testing of Flowing Gas Phase II to end Friday, July 20",
+      "date_iso": "2001-07-19T13:48:55+00:00",
+      "body_text": "Brad, do we need to bump this concern up a level?  or have you already?  Seems like\n\tthere has been a LOT of down time.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "23857589.1075853076315.JavaMail.evans@thyme",
+      "thread_id": "eb09abb66a550f7c",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "glen.hass@enron.com",
+        "jo.williams@enron.com",
+        "kimberly.watson@enron.com",
+        "lindy.donoho@enron.com",
+        "tk.lohman@enron.com",
+        "steven.january@enron.com",
+        "darrell.schoolcraft@enron.com",
+        "bradley.holmes@enron.com",
+        "steven.harris@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com",
+        "shelley.corman@enron.com",
+        "ava.garcia@enron.com"
+      ],
+      "subject": "SoCal Needles \"Window\" allocation",
+      "date_iso": "2001-07-20T22:23:52+00:00",
+      "body_text": "I would like to have a meeting to review pros and cons in relation to the\n\tprocedure Transwestern is using today for the SoCal Needles \"window\" allocation.\n\n\tSome of the questions being asked:\n\n\t1.  Why are we allocating for SoCal, (at their request)?\n\n\t2.  Why are we allowing SoCal to set the capacity lower than TW's primary firm?\n\n\t3.  What are the options for TW to change the alloction procedure at Needles?\n\n\tI am sure there is a host of other questions we could answer as well.  We are looking\n\tat Tuesday, July 24, at 9:00 a.m or Wednesday, July 25, 1:30 p.m.\n\n\tPlease let Ava Garcia (713-853-5842) know which day is better for you.  Then we will\n\tget a room and let everyone know date and time.\n\n\tThanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "3071781.1075853076360.JavaMail.evans@thyme",
+      "thread_id": "74c41e416dba421e",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "bradley.holmes@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: Meeting with Marketing",
+      "date_iso": "2001-07-23T19:49:44+00:00",
+      "body_text": "Brad, thanks for the info.  Also should John Dushinske be invited to this meeting?  He is the\nVice President over the North End Generation load and new services.  Just a thought.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "23776029.1075853076683.JavaMail.evans@thyme",
+      "thread_id": "25aa5a04157ab7dd",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "tammy.jaquet@enron.com",
+        "sheila.nacey@enron.com",
+        "donna.scott@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: Wednesday Staff Meeting",
+      "date_iso": "2001-07-24T21:23:46+00:00",
+      "body_text": "Tammy are doing Wed or Thursday?  I have Fran scheduled for Wed. morning, but can\n\treschedule if we need to use that time for the accounting training.  If it is Thursday,\n\tI will reshuffle my meetings.  Thanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "I will reshuffle my meetings.",
+        "due_text": "if it is Thursday",
+        "confidence": 0.9,
+        "evidence_quote": "I will reshuffle my meetings.",
+        "message_id": "23776029.1075853076683.JavaMail.evans@thyme",
+        "thread_id": "25aa5a04157ab7dd",
+        "stated_at": "2001-07-24T21:23:46+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "21321043.1075853077289.JavaMail.evans@thyme",
+      "thread_id": "5cbc74703707b00c",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "john.buchanan@enron.com"
+      ],
+      "cc": [],
+      "subject": "FW: WINTER OPS MEETING",
+      "date_iso": "2001-07-30T21:47:02+00:00",
+      "body_text": "John, can you help me put together the presentation we want for the Winter Ops\n\tmeeting?  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "19657438.1075853077752.JavaMail.evans@thyme",
+      "thread_id": "9fc963b8ece813e4",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "shelley.corman@enron.com"
+      ],
+      "cc": [],
+      "subject": "FW: Italian visitor. Mauro Formaggio",
+      "date_iso": "2001-08-02T22:34:37+00:00",
+      "body_text": "Shelley, I do not see the ladies name you mentioned on any of these emails.\n\tIf you will forward it to me.  I will send her this note.  Thanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "I will send her this note.",
+        "due_text": "by Friday",
+        "confidence": 0.9,
+        "evidence_quote": "I will send her this note.",
+        "message_id": "19657438.1075853077752.JavaMail.evans@thyme",
+        "thread_id": "9fc963b8ece813e4",
+        "stated_at": "2001-08-02T22:34:37+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "15700081.1075853082659.JavaMail.evans@thyme",
+      "thread_id": "d253adc138e16969",
+      "from": "lindy.donoho@enron.com",
+      "to": [
+        "steven.harris@enron.com",
+        "kimberly.watson@enron.com",
+        "tk.lohman@enron.com",
+        "lorraine.lindberg@enron.com",
+        "michelle.lokay@enron.com",
+        "darrell.schoolcraft@enron.com",
+        "perry.frazier@enron.com",
+        "eric.faucheaux@enron.com",
+        "lynn.blair@enron.com",
+        "steven.january@enron.com",
+        "shelley.corman@enron.com",
+        "glen.hass@enron.com",
+        "maria.pavlou@enron.com",
+        "kay.miller@enron.com",
+        "teb.lokey@enron.com",
+        "ramona.betancourt@enron.com",
+        "toby.kuehl@enron.com",
+        "robert.kilmer@enron.com",
+        "terry.kowalke@enron.com",
+        "tony.pryor@enron.com",
+        "steve.kirk@enron.com",
+        "dari.dornan@enron.com",
+        "morgan.gottsponer@enron.com"
+      ],
+      "cc": [],
+      "subject": "TW's Firm Capacity Procedures",
+      "date_iso": "2001-08-06T13:25:00+00:00",
+      "body_text": "Attached is the current version of TW's Firm Capacity Procedures.  (Posting requirements are defined in another document.)  These procedures outline the definitions of certificated/sustainable, operational/short-term sustainable and operational non-sustainable capacity and how we will determine how much and when capacity is available in each of these categories.\n\nI thought I would go ahead and distribute this because there have been some questions - though I understand some of the recent FERC rulings may require us to change the procedures as it concerns, among other things, whether operational/short-term sustainable capacity is sold under LFT vs. daily under FTS-1."
+    },
+    "commitments": [
+      {
+        "direction": "owed_by_me",
+        "counterparty": "lindy.donoho@enron.com",
+        "what": "Attached is the current version of TW's Firm Capacity Procedures.",
+        "due_text": "2001-08-06T13:25:00+00:00",
+        "confidence": 0.95,
+        "evidence_quote": "Attached is the current version of TW's Firm Capacity Procedures.",
+        "message_id": "15700081.1075853082659.JavaMail.evans@thyme",
+        "thread_id": "d253adc138e16969",
+        "stated_at": "2001-08-06T13:25:00+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "3900661.1075853078008.JavaMail.evans@thyme",
+      "thread_id": "befc7dc70c2f68b1",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "jean.blair@enron.com",
+        "randy.bryan@enron.com",
+        "nancy.callans@enron.com",
+        "james.carr@enron.com",
+        "karen.clapper@enron.com",
+        "katherine.perry@enron.com",
+        "diana.porter@enron.com",
+        "shirley.walden@enron.com",
+        "kathy.washington@enron.com",
+        "jerry.wilkens@enron.com",
+        "jean.adams@enron.com",
+        "robert.benningfield@enron.com",
+        "tangie.dykes@enron.com",
+        "sherry.forbish@enron.com",
+        "chris.greaney@enron.com",
+        "scott.hibbard@enron.com",
+        "randy.janzen@enron.com",
+        "joe.linhart@enron.com",
+        "janet.mcdaniel@enron.com",
+        "debra.scurlock@enron.com",
+        "kathy.sturr@enron.com",
+        "harry.woodson@enron.com"
+      ],
+      "cc": [
+        "larry.berger@enron.com",
+        "raetta.zadow@enron.com",
+        "john.buchanan@enron.com",
+        "terry.kowalke@enron.com",
+        "lynn.blair@enron.com"
+      ],
+      "subject": "Reservation/Commodity Close",
+      "date_iso": "2001-08-06T14:09:20+00:00",
+      "body_text": "I would like to remind everyone it is very critical that we send out accurate\n\tinvoices to our customers.  It is our responsibility to review the reports\n\tahead of time (Measurement, Preliminaries, etc).  I feel very strongly\n\tthat we should NOT be taking comp days on critical accounting days.\n\tAs I have stated in previous memos this is mainly, reservation close day,\n\tthe day before commodity close and commodity close day.\n\n\tYou should also be considerate of your team when scheduling vacation\n\taround these days and ensure you have SPECIFIED proper back up.\n\tIt is still your responsibility to ensure your invoices are properly reviewed\n\tand sent out whether you are in the office or not.\n\n\tIf you have any questions, please let me know.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "32350755.1075853078182.JavaMail.evans@thyme",
+      "thread_id": "99ba305d89cd0a78",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "larry.berger@enron.com",
+        "lynn.blair@enron.com",
+        "michael.bodnar@enron.com",
+        "john.buchanan@enron.com",
+        "terry.kowalke@enron.com",
+        "raetta.zadow@enron.com",
+        "jean.blair@enron.com",
+        "randy.bryan@enron.com",
+        "nancy.callans@enron.com",
+        "james.carr@enron.com",
+        "karen.clapper@enron.com",
+        "katherine.perry@enron.com",
+        "diana.porter@enron.com",
+        "shirley.walden@enron.com",
+        "kathy.washington@enron.com",
+        "jerry.wilkens@enron.com",
+        "jean.adams@enron.com",
+        "robert.benningfield@enron.com",
+        "tangie.dykes@enron.com",
+        "sherry.forbish@enron.com",
+        "chris.greaney@enron.com",
+        "scott.hibbard@enron.com",
+        "randy.janzen@enron.com",
+        "joe.linhart@enron.com",
+        "janet.mcdaniel@enron.com",
+        "debra.scurlock@enron.com",
+        "kathy.sturr@enron.com",
+        "harry.woodson@enron.com",
+        "laura.giambrone@enron.com",
+        "bert.hernandez@enron.com",
+        "christine.mcevoy@enron.com",
+        "beverly.miller@enron.com",
+        "tracy.minter@enron.com",
+        "amy.mulligan@enron.com",
+        "linda.ward@enron.com"
+      ],
+      "cc": [
+        "ava.garcia@enron.com",
+        "sharon.brown@enron.com",
+        "alma.carrillo@enron.com",
+        "ava.garcia@enron.com",
+        "ricki.winters@enron.com",
+        "shelley.corman@enron.com",
+        "rick.dietz@enron.com",
+        "bradley.holmes@enron.com",
+        "steven.january@enron.com",
+        "sheila.nacey@enron.com",
+        "donna.scott@enron.com"
+      ],
+      "subject": "Out of Office",
+      "date_iso": "2001-08-06T18:58:11+00:00",
+      "body_text": "I will be out of the office August 6 thru August 17th.  In my absence you can contact the\n\tfollowing people:\n\n\tScheduling Issues - John Buchanan\n\t\t\t     Terry Kowalke\n\n\tGas Accounting Issues - Larry Berger\n\t\t\t             Raetta Zadow\n\t\t\t\t Rick Dietz\n\n\tOperational Issues - Gary Spraggins\n\t\t\t      Darrell Schoolcraft\n\t\t\t      Steve January\n\n\tSystem Issues - Please go through John or Terry.  If they are not available, contact Brad Holmes\n\n\tIf you need a Director for signatures: Rick Dietz and Steve January will be available.\n\n\tHave a great two weeks.  I will be thinking of all of you while I am on vacation!!!!!!\n\n\tThanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "Rick Dietz and Steve January",
+        "what": "will be available for signatures",
+        "due_text": "N/A",
+        "confidence": 0.7,
+        "evidence_quote": "If you need a Director for signatures: Rick Dietz and Steve January will be available.",
+        "message_id": "32350755.1075853078182.JavaMail.evans@thyme",
+        "thread_id": "99ba305d89cd0a78",
+        "stated_at": "2001-08-06T18:58:11+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "24931221.1075853079089.JavaMail.evans@thyme",
+      "thread_id": "ae3c86769db44fc5",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "john.buchanan@enron.com",
+        "terry.kowalke@enron.com",
+        "larry.berger@enron.com",
+        "raetta.zadow@enron.com"
+      ],
+      "cc": [],
+      "subject": "FW: New Storage Points Meeting",
+      "date_iso": "2001-08-24T14:46:52+00:00",
+      "body_text": "FYI.  All four of you do not need to be there.  But I would like one from accounting\n\tand one from scheduling.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "32771602.1075853082685.JavaMail.evans@thyme",
+      "thread_id": "f7a5cd2c844627a3",
+      "from": "john.buchanan@enron.com",
+      "to": [
+        "russell.mitchell@enron.com",
+        "glenn.stovall@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com",
+        "terry.kowalke@enron.com"
+      ],
+      "subject": "Remote Access Pilot List",
+      "date_iso": "2001-08-27T17:22:54+00:00",
+      "body_text": "Attached is a prioritized list of people wanting to be part of the pilot. Please use the number one's first and so on.\n\nThanks: John Buchanan"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "11789013.1075853079368.JavaMail.evans@thyme",
+      "thread_id": "a94c09e263109547",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "jean.adams@enron.com",
+        "terry.kowalke@enron.com",
+        "john.buchanan@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: Rates Effective August 1, 2001",
+      "date_iso": "2001-08-27T22:02:56+00:00",
+      "body_text": "I definitely think we should let customers know as needed basis.  Someone should certainly\n\ttalk to ENA.  Terry, please work with Jean on this.\n\n\tJohn and Terry, are there other customers who download our rates?  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "29877939.1075853082709.JavaMail.evans@thyme",
+      "thread_id": "8dfc3be8b811a9c9",
+      "from": "ramona.betancourt@enron.com",
+      "to": [
+        "linda.trevino@enron.com",
+        "dennis.lee@enron.com",
+        "elizabeth.brown@enron.com",
+        "lindy.donoho@enron.com",
+        "tk.lohman@enron.com",
+        "kimberly.watson@enron.com"
+      ],
+      "cc": [
+        "rick.dietz@enron.com",
+        "bradley.holmes@enron.com",
+        "hasan.kedwaii@enron.com",
+        "david.duff@enron.com",
+        "lynn.blair@enron.com"
+      ],
+      "subject": "TW requirements for Inside/Outside the Path and TW Flow Direction",
+      "date_iso": "2001-08-28T16:37:10+00:00",
+      "body_text": "Attached below are the two files for TW CMS/TMS requirements on flow direction and current process for inside/outside the path requirements.\n\nPlease review these documents and let me know if you have any questions or  corrections to apply to either document by COB\n8/31/01.\n\nLinda, please keep me in the loop on both of the projects since they interface directly with TMS.\n\nThanks Ramona"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "2691643.1075853062848.JavaMail.evans@thyme",
+      "thread_id": "59b60b2381517c36",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "cynthia.rivers@enron.com",
+        "robert.benningfield@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com"
+      ],
+      "subject": "RE: Baseball Tickets",
+      "date_iso": "2001-09-04T15:35:36+00:00",
+      "body_text": "Robert, I would like to give all four tickets to Cynthia for this round since\n\tyou will be spending time with Duke next week at the Winter Ops meeting.\n\tWill catch you on the next round.\n\tCynthia come by and get the tickets.  Thanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "Cynthia",
+        "what": "give all four tickets to Cynthia",
+        "due_text": "2001-09-04T15:35:36+00:00",
+        "confidence": 0.9,
+        "evidence_quote": "I would like to give all four tickets to Cynthia for this round since you will be spending time with Duke next week at the Winter Ops meeting.",
+        "message_id": "2691643.1075853062848.JavaMail.evans@thyme",
+        "thread_id": "59b60b2381517c36",
+        "stated_at": "2001-09-04T15:35:36+00:00"
+      },
+      {
+        "direction": "owed_to_me",
+        "counterparty": "Robert",
+        "what": "catch you on the next round",
+        "due_text": "2001-09-04T15:35:36+00:00",
+        "confidence": 0.7,
+        "evidence_quote": "Will catch you on the next round.",
+        "message_id": "2691643.1075853062848.JavaMail.evans@thyme",
+        "thread_id": "59b60b2381517c36",
+        "stated_at": "2001-09-04T15:35:36+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "5646149.1075853063197.JavaMail.evans@thyme",
+      "thread_id": "520288f3b96fca22",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "charlie.graham@enron.com"
+      ],
+      "cc": [
+        "rick.kile@enron.com",
+        "mike.nelson@enron.com",
+        "dan.fancler@enron.com"
+      ],
+      "subject": "RE: Mt. Jesus Condensate",
+      "date_iso": "2001-09-10T23:56:07+00:00",
+      "body_text": "Charlie, let me try calling Delaine in the morning and ask her who is next\n\tin the chain of command I should visit with on this issue.  Let's see what\n\tkind of a response I get.  If that does not work, then Mike or Shelley\n\tmay need to call.  I will let you know.  Thanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_by_me",
+        "counterparty": "charlie.graham@enron.com",
+        "what": "I will let you know.",
+        "due_text": "2001-09-10T23:56:07+00:00",
+        "confidence": 0.9,
+        "evidence_quote": "I will let you know.",
+        "message_id": "5646149.1075853063197.JavaMail.evans@thyme",
+        "thread_id": "520288f3b96fca22",
+        "stated_at": "2001-09-10T23:56:07+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "27085531.1075853063290.JavaMail.evans@thyme",
+      "thread_id": "2bf255f06cc79c49",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "raetta.zadow@enron.com",
+        "jodie.floyd@enron.com",
+        "kathy.washington@enron.com",
+        "john.buchanan@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com",
+        "ava.garcia@enron.com"
+      ],
+      "subject": "FW: Ft. Buford Measurement Facilities Agreement - Comments",
+      "date_iso": "2001-09-11T18:34:42+00:00",
+      "body_text": "I want to get together and discuss this before we call Dari or Rita.\n\tAva, please set up a time on Wednesday or Thursday.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "20307678.1075853063336.JavaMail.evans@thyme",
+      "thread_id": "0ab1f25898179585",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "raetta.zadow@enron.com",
+        "rick.dietz@enron.com",
+        "larry.berger@enron.com"
+      ],
+      "cc": [
+        "larry.davis@enron.com",
+        "esther.dasilva@enron.com"
+      ],
+      "subject": "RE: Possible System Changes",
+      "date_iso": "2001-09-11T22:55:52+00:00",
+      "body_text": "We can make the meeting Thursday afternoon if that is better for you guys.  It will\n    be short because there is not a whole lot to discuss.   Rick, FYI, Shelley postponed her meeting\n    until 10:00 in the morning so she could listen in on FERC meeting.  Possible means they do\n    not have a final ruling as to what direction we are going, but she wanted to give us a \"heads\n    up\" from a system perspective.  Hopefully that helps.  See ya'll in the morning.  Thanks. Lynn"
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "raetta.zadow@enron.com",
+        "what": "We can make the meeting Thursday afternoon if that is better for you guys.",
+        "due_text": "2001-09-11T22:55:52+00:00",
+        "confidence": 0.9,
+        "evidence_quote": "We can make the meeting Thursday afternoon if that is better for you guys.",
+        "message_id": "20307678.1075853063336.JavaMail.evans@thyme",
+        "thread_id": "0ab1f25898179585",
+        "stated_at": "2001-09-11T22:55:52+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "681207.1075853063591.JavaMail.evans@thyme",
+      "thread_id": "7cd238823217d5a4",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "ramona.betancourt@enron.com",
+        "terry.kowalke@enron.com"
+      ],
+      "cc": [
+        "kimberly.watson@enron.com",
+        "lynn.blair@enron.com",
+        "lindy.donoho@enron.com"
+      ],
+      "subject": "FW: TWTrading Imbalances Draft",
+      "date_iso": "2001-09-12T22:57:39+00:00",
+      "body_text": "Wanted to be sure you were both in the loop that we are NOT posting Shipper\n\timbalances to the Web, only OBA Dollar Valued agreements.  If you have any\n\tquestions, please let me know.  This was decided after a meeting this morning\n\twith Shelley and Teb to review TW tariff and compliance.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "13869576.1075853064056.JavaMail.evans@thyme",
+      "thread_id": "6db52c6977564889",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "shelley.corman@enron.com",
+        "steven.january@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: Update for Staff Meeting tomorrow",
+      "date_iso": "2001-09-17T11:28:55+00:00",
+      "body_text": "Shelley, for Saturday's gas day the Socal window was approximately 653,000. We actually scheduled 615,674\n    For Sunday's gas day the window started at 707,476 and ended at 645,892.  We actually scheduled 615,618\n    Otherwise the weekend was quite.  I'll leave the schedules for Socal on your desk in case you want them.\n   Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "",
+    "error": "Expected property name or '}' in JSON at position 7489 (line 5617 column 2)"
+  },
+  {
+    "message": {
+      "id": "32668556.1075853064337.JavaMail.evans@thyme",
+      "thread_id": "01dba38105ea8be5",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "mformaggio@autorita.energia.it"
+      ],
+      "cc": [],
+      "subject": "RE: In sign of Solidarirty",
+      "date_iso": "2001-09-17T23:15:00+00:00",
+      "body_text": "Mauro, it was very good to hear from you, I just wish it would have been under different\n\tcircumstances.  I do appreicate your thoughtfulness.  Hope all is well with you and your\n\tfamily.  Take care.  Lynn Blair"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "9998202.1075853064496.JavaMail.evans@thyme",
+      "thread_id": "a5f7919ef7d9025e",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "jean.blair@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com"
+      ],
+      "subject": "Commodity Close",
+      "date_iso": "2001-09-17T23:45:47+00:00",
+      "body_text": "Jean, I believe you were out of the office on commodity close.  Who was reviewing\n\tthe stack of reports on your desk?  Did we properly have the bases covered with\n\tyou out?  Just trying to be sure we have the right coverage for accounting closes.\n\n\tThanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "5117440.1075853079863.JavaMail.evans@thyme",
+      "thread_id": "3d4b4330291c4c20",
+      "from": "michael.bodnar@enron.com",
+      "to": [
+        "lynn.blair@enron.com",
+        "sue.neville@enron.com",
+        "steven.january@enron.com",
+        "john.buchanan@enron.com",
+        "gerry.medeles@enron.com",
+        "terry.kowalke@enron.com",
+        "gary.spraggins@enron.com",
+        "bradley.holmes@enron.com",
+        "joe.hoang@enron.com",
+        "larry.swett@enron.com",
+        "steve.thomas@enron.com",
+        "kent.miller@enron.com",
+        "kay.threet@enron.com",
+        "reyna.cabrera@enron.com",
+        "theresa.branney@enron.com",
+        "preston.roobaert@enron.com"
+      ],
+      "cc": [
+        "doug.aschwege@enron.com",
+        "l..johnson@enron.com",
+        "jill.setera@enron.com"
+      ],
+      "subject": "Results of Meeting on Storage Allocation Changes",
+      "date_iso": "2001-09-20T19:24:53+00:00",
+      "body_text": "The following summarizes the results of our meeting......If you want to discuss further, please call me.\n\nBreak Field Area in 3 Regions / Allocate by point\nThe decision was made to sub-divide the Field Area storage group into two regions; South of Plainview and North of Plainview, rather than 3 regions or allocating by point. If it is determined that additional divisions are necessary in the future, such changes can be made at that time. Changes  to CAS are required. I have discussed the changes with Bob Johnson and Doug Aschwege and have learned that the changes are not difficult to make and could be made in a couple days.\nGary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.\n\nQuestion:  Should this change be implemented immediately or should it wait until the beginning of the withdrawal season?\n\nChange from 'net zero' approach / Provide minimum level of activity\nThe decision was made to table this concern for now. The scheduled activity that drives the allocation process does not guarantee physical pipeline operations. In most cases, the flexibility provided by the Cunningham Field allows Gas Control to adjust operations to maintain the required minimum level of injections/withdrawals into Redfield and Lyons. Further analysis is required. Steve Thomas, Larry Swett and I will continue to monitor the system conditions/operations that effect physical storage to determine if and what additional changes maybe warranted.\n\nSend \"Notice\" when final scheduled number exceeds operational capacity\nThe IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage. If the final scheduled quantity exceeds operational capacity, I will receive a notification via e-mail. The purpose here is to monitor occurrences to determine the magnitude of the problem. I will get with Gerry Medeles to finalize the matter."
+    },
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "Michael Bodnar",
+        "what": "Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.",
+        "due_text": "by providing the information to Bob and Doug",
+        "confidence": 0.95,
+        "evidence_quote": "Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.",
+        "message_id": "5117440.1075853079863.JavaMail.evans@thyme",
+        "thread_id": "3d4b4330291c4c20",
+        "stated_at": "2001-09-20T19:24:53+00:00"
+      },
+      {
+        "direction": "owed_to_me",
+        "counterparty": "IT group",
+        "what": "The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage.",
+        "due_text": "by modifying the scheduling cycle to add the procedure",
+        "confidence": 0.95,
+        "evidence_quote": "The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage.",
+        "message_id": "5117440.1075853079863.JavaMail.evans@thyme",
+        "thread_id": "3d4b4330291c4c20",
+        "stated_at": "2001-09-20T19:24:53+00:00"
+      }
+    ],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "8810944.1075853079887.JavaMail.evans@thyme",
+      "thread_id": "e1aaf51cbb5a4d4e",
+      "from": "lindy.donoho@enron.com",
+      "to": [
+        "teb.lokey@enron.com",
+        "blair.lichtenwalter@enron.com",
+        "terry.kowalke@enron.com",
+        "lynn.blair@enron.com",
+        "darrell.schoolcraft@enron.com",
+        "glen.hass@enron.com",
+        "mary.darveaux@enron.com"
+      ],
+      "cc": [
+        "kimberly.watson@enron.com"
+      ],
+      "subject": "Notes from 637 Imbal Mtg 9/18/01",
+      "date_iso": "2001-09-20T20:56:28+00:00",
+      "body_text": "Already in TW's Tariff\n\n1.\tDollar valuing.  Need to terminate volumetric OBA's where possible to minimize TW's financial exposure.\n\nProposed in TW's 637 Filing - Keep\n\n1.\tMandatory cash-out each month (after netting and option to trade).\n2.\tDefinition of 6 indices (vs. 3 in current tariff).\n3.\tParties may mutually agree to cash out PNR.  Could probably do today without this language.\n4.\tClarification that PNR may be used by Operators.\n5.\tMay use PNR for \"auto-balancing\".\n\nProposed in TW's 637 Filing - Could \"Trade\"\n\n1.\tDaily balancing.  Including daily tolerance, daily auto-transfer to PNR & daily pricing.\n2.\tSmaller tolerance range.  Proposed change from +/- 10% to +/- 5%."
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "9828511.1075853079911.JavaMail.evans@thyme",
+      "thread_id": "b281887a85569e00",
+      "from": "chris.greaney@enron.com",
+      "to": [
+        "jean.adams@enron.com",
+        "robert.benningfield@enron.com",
+        "sherry.forbish@enron.com",
+        "scott.hibbard@enron.com",
+        "randy.janzen@enron.com",
+        "joe.linhart@enron.com",
+        "janet.mcdaniel@enron.com",
+        "debra.scurlock@enron.com",
+        "kathy.sturr@enron.com",
+        "cara.vaughan@enron.com",
+        "harry.woodson@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com",
+        "john.buchanan@enron.com",
+        "terry.kowalke@enron.com"
+      ],
+      "subject": "team covergae",
+      "date_iso": "2001-09-21T13:30:54+00:00",
+      "body_text": "There are a few more updates to the schedule sent out yesterday. This form is in excel under: T/Common/south central/vacationsched in case anyone needs to make any more adjustments."
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "",
+    "error": "Expected property name or '}' in JSON at position 9786 (line 5872 column 3)"
+  },
+  {
+    "message": {
+      "id": "27490031.1075853065327.JavaMail.evans@thyme",
+      "thread_id": "80795fd7b9c5c264",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "john.buchanan@enron.com",
+        "gerry.medeles@enron.com",
+        "terry.kowalke@enron.com"
+      ],
+      "cc": [
+        "lynn.blair@enron.com"
+      ],
+      "subject": "FW: Questions on MDQ",
+      "date_iso": "2001-09-21T22:30:08+00:00",
+      "body_text": "Is the volume at the inlet and outlet of Bushton factored into any MDQ total?  Gerry\n\tif you are not the person to help us on this, please let me know who.  Also in talking\n\twith Mary Darveaux she said if you use the same contract at the inlet and outlet of\n\tBushton, you DO double your MDQ.  Therefore, if you have 10,000 MDQ you can\n\tonly nominate 5,000 to inlet and 5,000 at outlet.\n\n\tGerry, can we run a quick report to see if there are any contracts that are identical\n\ton the inlet and outlet of Bushton?   If she is right, then we have NOT had anyone\n\tnominate on the same contract.  If I have confused you, let's discuss.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "21089761.1075853065374.JavaMail.evans@thyme",
+      "thread_id": "80795fd7b9c5c264",
+      "from": "lynn.blair@enron.com",
+      "to": [
+        "legale.black@enron.com",
+        "gerry.medeles@enron.com",
+        "terry.kowalke@enron.com",
+        "john.buchanan@enron.com"
+      ],
+      "cc": [],
+      "subject": "RE: Questions on MDQ",
+      "date_iso": "2001-09-24T11:51:09+00:00",
+      "body_text": "We need to discuss ASAP this morning.  Legale, would you be available at 8:30?  We\n\tcan meet in my office.  Gerry, sounds like Legale is who we were looking for.  You are\n\twelcome to set in, but not necessary.  Thanks. Lynn"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  },
+  {
+    "message": {
+      "id": "18119881.1075853079959.JavaMail.evans@thyme",
+      "thread_id": "c6408a55a690df52",
+      "from": "john.buchanan@enron.com",
+      "to": [
+        "lynn.blair@enron.com",
+        "steven.january@enron.com",
+        "joe.linhart@enron.com",
+        "mary.darveaux@enron.com",
+        "chris.greaney@enron.com",
+        "larry.berger@enron.com",
+        "raetta.zadow@enron.com",
+        "rick.dietz@enron.com",
+        "harry.woodson@enron.com",
+        "robert.benningfield@enron.com",
+        "john.buchanan@enron.com",
+        "terry.kowalke@enron.com",
+        "karen.brostad@enron.com"
+      ],
+      "cc": [],
+      "subject": "NNG/Oneok Meeting Notes",
+      "date_iso": "2001-09-24T14:26:45+00:00",
+      "body_text": "See attached for NNG's draft notes from the 08/29/01 meeting, please review and feel free to suggest changes. Please forward to anyone I may have missed on the distribution list.\n\nJohn Buchanan"
+    },
+    "commitments": [],
+    "rejected": [],
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "error": null
+  }
+]

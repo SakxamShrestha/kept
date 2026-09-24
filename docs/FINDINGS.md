@@ -108,3 +108,55 @@ docs should say which models are region- or tier-gated.
   few-shot examples.
 - **OpenAI-compatible surface meant zero client work** — the stock `fetch`
   shape, `tools`, and `response_format` all behaved as documented.
+
+## 7. Day 1 extraction eval — Nano cannot hold negative constraints, Super can
+
+150 real Enron messages, identical prompt and strict schema, `reasoning_effort: "low"`.
+
+| | Nemotron 3 Super 120B | Nemotron 3 Nano 30B |
+|---|---|---|
+| Commitments extracted | 19 | 41 |
+| Precision (manual review) | **~95%** | **~60%** |
+| Ungrounded quotes dropped | 4 | 2 |
+| Hard call failures | 0 | 6 (4%) |
+
+Nano extracts more than twice as many commitments, and the surplus is almost
+entirely error. Every Nano false positive fell into one of two classes:
+
+- **Conditionals** — "If it is Thursday, I will reshuffle my meetings",
+  "If Marketing can input the correct rates, I can regenerate the invoices"
+- **Requests** — "Please review these documents by COB 8/31", "Please let me know
+  if you have talked with anyone at Post Rock"
+
+Both classes are spelled out in the prompt as counter-examples, one of them
+(`"Please review these documents by COB Friday"`) almost verbatim. Nano reads the
+instruction and extracts the thing anyway. Super, same prompt, excludes both
+cleanly.
+
+The useful conclusion is not "Nano is bad" — it is that **Nano cannot reliably
+hold a negative constraint**, and a commitment extractor is mostly negative
+constraints. Tasks defined by what to *exclude* need the larger model.
+
+### This inverts the cascade we planned
+
+The plan assumed Nano would do cheap high-fanout extraction and Super would do
+reconciliation. The measurement says extraction itself needs Super. But Nano's
+failure mode is *over*-extraction, which is precisely what stage 1 of a cascade
+wants: high recall, cheap, and a precise model behind it to filter. Only ~11% of
+messages contain any commitment at all, so a Nano binary pre-filter should cut
+Super calls by roughly an order of magnitude while Super still decides every row
+that reaches the ledger.
+
+### Two guards that had to live in code, not in the prompt
+
+- **`due_text` invention.** Models filled the deadline field with the message's
+  own send timestamp, inferred ISO dates, or "N/A" when no deadline was stated.
+  In a ledger this is the most damaging possible error: an undated promise
+  silently acquires a date, then goes overdue on its own, and the user chases
+  someone over a deadline nobody agreed to. `cleanDue()` keeps a deadline only if
+  its wording actually appears in the message body.
+- **Confidence scale.** Models occasionally emit `confidence: 95` where the schema
+  asks for 0-1, which would sail past every downstream threshold. Normalized in
+  code.
+
+Neither was fixed by asking more firmly in the prompt. Both needed enforcement.

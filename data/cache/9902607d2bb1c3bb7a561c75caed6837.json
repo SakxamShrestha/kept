@@ -1,0 +1,24 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_by_me",
+        "counterparty": "lindy.donoho@enron.com",
+        "what": "Attached is the current version of TW's Firm Capacity Procedures.",
+        "due_text": "2001-08-06T13:25:00+00:00",
+        "confidence": 0.95,
+        "evidence_quote": "Attached is the current version of TW's Firm Capacity Procedures."
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_by_me\",\n      \"counterparty\": \"lindy.donoho@enron.com\",\n      \"what\": \"Attached is the current version of TW's Firm Capacity Procedures.\",\n      \"due_text\": \"2001-08-06T13:25:00+00:00\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"Attached is the current version of TW's Firm Capacity Procedures.\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 764,
+    "prompt_tokens": 551,
+    "total_tokens": 1315,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

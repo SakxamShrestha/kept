@@ -206,13 +206,29 @@ export async function chat<T = unknown>(opts: ChatOptions): Promise<ChatResult<T
       if (res.ok) {
         const json = await res.json();
         const raw: string = json.choices?.[0]?.message?.content ?? "";
-        const result: ChatResult<T> = {
-          data: opts.schema ? (JSON.parse(raw) as T) : (raw as T),
-          raw,
-          model,
-          source: "live",
-          usage: json.usage,
-        };
+
+        // Nano returns HTTP 200 with empty content at some reasoning_effort
+        // levels, and degenerates into an unterminated whitespace loop on some
+        // inputs even at "low". Both arrive as successful responses, so they
+        // have to be caught here rather than by status code. Treat them like a
+        // dead model and fall through to the next one in the chain.
+        let data: T;
+        if (opts.schema) {
+          if (!raw.trim()) {
+            lastError = `${model} returned empty content (finish_reason: ${json.choices?.[0]?.finish_reason})`;
+            break;
+          }
+          try {
+            data = JSON.parse(raw) as T;
+          } catch {
+            lastError = `${model} returned unparseable JSON (${raw.length} chars, finish_reason: ${json.choices?.[0]?.finish_reason})`;
+            break;
+          }
+        } else {
+          data = raw as T;
+        }
+
+        const result: ChatResult<T> = { data, raw, model, source: "live", usage: json.usage };
         await writeCache(key, result as ChatResult);
         return result;
       }

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "Rick Dietz and Steve January",
+        "what": "will be available for signatures",
+        "due_text": "N/A",
+        "confidence": 0.7,
+        "evidence_quote": "If you need a Director for signatures: Rick Dietz and Steve January will be available."
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"Rick Dietz and Steve January\",\n      \"what\": \"will be available for signatures\",\n      \"due_text\": \"N/A\",\n      \"confidence\": 0.7,\n      \"evidence_quote\": \"If you need a Director for signatures: Rick Dietz and Steve January will be available.\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1183,
+    "prompt_tokens": 570,
+    "total_tokens": 1753,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

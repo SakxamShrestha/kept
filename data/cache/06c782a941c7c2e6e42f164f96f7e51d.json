@@ -1,0 +1,32 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "Michael Bodnar",
+        "what": "Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.",
+        "due_text": "by providing the information to Bob and Doug",
+        "confidence": 0.95,
+        "evidence_quote": "Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug."
+      },
+      {
+        "direction": "owed_to_me",
+        "counterparty": "IT group",
+        "what": "The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage.",
+        "due_text": "by modifying the scheduling cycle to add the procedure",
+        "confidence": 0.95,
+        "evidence_quote": "The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage."
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"Michael Bodnar\",\n      \"what\": \"Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.\",\n      \"due_text\": \"by providing the information to Bob and Doug\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.\"\n    },\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"IT group\",\n      \"what\": \"The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage.\",\n      \"due_text\": \"by modifying the scheduling cycle to add the procedure\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage.\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1935,
+    "prompt_tokens": 799,
+    "total_tokens": 2734,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

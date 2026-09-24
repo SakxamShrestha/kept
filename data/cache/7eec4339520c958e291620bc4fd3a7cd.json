@@ -1,0 +1,24 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "I will be out of the office August 6 thru August 17th.",
+        "due_text": "",
+        "confidence": 0.95,
+        "evidence_quote": "I will be out of the office August 6 thru August 17th."
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"lynn.blair@enron.com\",\n      \"what\": \"I will be out of the office August 6 thru August 17th.\",\n      \"due_text\": \"\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"I will be out of the office August 6 thru August 17th.\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 444,
+    "prompt_tokens": 942,
+    "total_tokens": 1386,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

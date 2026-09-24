@@ -1,0 +1,40 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "Gary Spraggins and michael.bodnar@enron.com",
+        "due_text": "",
+        "confidence": 0.95,
+        "evidence_quote": "Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug."
+      },
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "The IT group",
+        "due_text": "",
+        "confidence": 0.95,
+        "evidence_quote": "The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage."
+      },
+      {
+        "direction": "owed_to_me",
+        "counterparty": "lynn.blair@enron.com",
+        "what": "michael.bodnar@enron.com",
+        "due_text": "",
+        "confidence": 0.95,
+        "evidence_quote": "I will get with Gerry Medeles to finalize the matter."
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"lynn.blair@enron.com\",\n      \"what\": \"Gary Spraggins and michael.bodnar@enron.com\",\n      \"due_text\": \"\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"Gary Spraggins and I will determine which deferred delivery points are in these new field regions and then provide the information to Bob and Doug.\"\n    },\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"lynn.blair@enron.com\",\n      \"what\": \"The IT group\",\n      \"due_text\": \"\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"The IT group will modify the scheduling cycle to add a procedure where the final net scheduled storage quantity is compared to the operational capacity set for storage.\"\n    },\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"lynn.blair@enron.com\",\n      \"what\": \"michael.bodnar@enron.com\",\n      \"due_text\": \"\",\n      \"confidence\": 0.95,\n      \"evidence_quote\": \"I will get with Gerry Medeles to finalize the matter.\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 2961,
+    "prompt_tokens": 1171,
+    "total_tokens": 4132,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

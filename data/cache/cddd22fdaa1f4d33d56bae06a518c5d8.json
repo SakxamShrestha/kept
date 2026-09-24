@@ -1,0 +1,24 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_by_me",
+        "counterparty": "mary.darveaux@enron.com",
+        "what": "",
+        "due_text": "",
+        "confidence": 0,
+        "evidence_quote": ""
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_by_me\",\n      \"counterparty\": \"mary.darveaux@enron.com\",\n      \"what\": \"\",\n      \"due_text\": \"\",\n      \"confidence\": 0.0,\n      \"evidence_quote\": \"\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 257,
+    "prompt_tokens": 442,
+    "total_tokens": 699,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

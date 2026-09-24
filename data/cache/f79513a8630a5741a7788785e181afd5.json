@@ -1,0 +1,24 @@
+{
+  "data": {
+    "commitments": [
+      {
+        "direction": "owed_to_me",
+        "counterparty": "charlie.graham@enron.com",
+        "what": "I will let you know.",
+        "due_text": "",
+        "confidence": 0.95,
+        "evidence_quote": "I will let you know."
+      }
+    ]
+  },
+  "raw": "{\n  \"commitments\": [\n    {\n      \"direction\": \"owed_to_me\",\n      \"counterparty\": \"charlie.graham@enron.com\",\n      \"what\": \"I will let you know.\",\n      \"due_text\": \"\",\n      \"confidence\": 0.95\n    ,\n      \"evidence_quote\": \"I will let you know.\"\n    }\n  ]\n}",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1283,
+    "prompt_tokens": 864,
+    "total_tokens": 2147,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}
