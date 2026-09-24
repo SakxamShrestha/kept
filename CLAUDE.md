@@ -108,6 +108,12 @@ training cutoff — read `node_modules/next/dist/docs/` before writing App Route
 - Extraction is Nano at `reasoning_effort: "none"`; reconciliation is Super at `"high"`.
   Ultra stays unused on purpose — say so in the README rather than adding a token call.
 
+## Where things are written down
+
+- `docs/TASKS.md` — the task board. What is done, what is next, submission checklist.
+- `docs/SPEC.md` — implementation spec and acceptance criteria.
+- `docs/FINDINGS.md` — measured platform findings. Source for the required feedback submission.
+
 ## Repo state
 
 Day 0 scaffold. No corpus, no pipeline, no UI yet. Next: Day 1 extraction-precision eval
