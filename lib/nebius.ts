@@ -39,6 +39,27 @@ export function modelChain(role: Role): string[] {
     .filter(Boolean);
 }
 
+/**
+ * Measured on 2026-09-23 against Token Factory (see docs/FINDINGS.md):
+ *
+ *   Nemotron 3 Nano, reasoning_effort="none"  -> empty content, finish_reason
+ *     "stop", ~8 completion tokens. The call succeeds and returns nothing.
+ *   Nemotron 3 Nano, reasoning_effort="high"  -> emits valid JSON for one field
+ *     then degenerates into a whitespace loop, consuming the entire token
+ *     budget (16k tokens / 71s observed) and finishing with "length".
+ *   Nemotron 3 Nano, reasoning_effort="low"   -> correct, ~1.3s, ~250 tokens.
+ *
+ * So Nano is clamped to "low" regardless of what a caller asks for. Super and
+ * Ultra are well-behaved at every level tested.
+ */
+function safeEffort(model: string, requested?: ReasoningEffort): ReasoningEffort | undefined {
+  if (!/nano/i.test(model)) return requested;
+  if (requested === "none" || requested === "high" || requested === "xhigh" || requested === "max") {
+    return "low";
+  }
+  return requested ?? "low";
+}
+
 /** Nemotron reasoning budget. Token Factory exposes seven levels; we use the
  *  cheap end for high-fanout extraction and the expensive end for reconciliation. */
 export type ReasoningEffort =
@@ -159,7 +180,8 @@ export async function chat<T = unknown>(opts: ChatOptions): Promise<ChatResult<T
       temperature: opts.temperature ?? 0,
       max_tokens: opts.maxTokens ?? 4096,
     };
-    if (opts.reasoningEffort) body.reasoning_effort = opts.reasoningEffort;
+    const effort = safeEffort(model, opts.reasoningEffort);
+    if (effort) body.reasoning_effort = effort;
     if (opts.schema) {
       body.response_format = {
         type: "json_schema",
