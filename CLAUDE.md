@@ -45,16 +45,18 @@ Regional host alternate, if the generic one fails: `https://api.tokenfactory.us-
 
 ## Model selection
 
-| Need | Model |
-|---|---|
-| Heavy reasoning, long-running autonomous work | Nemotron 3 Ultra 550b |
-| Default workhorse, multi-agent | Nemotron 3 Super 120b — `nvidia/nemotron-3-super-120b-a12b` |
-| Fast, cheap, high-volume calls | Nemotron 3 Nano 30b |
-| Multimodal | Nemotron 3 Nano Omni |
+Confirmed on this account via `npm run check:models`. Casing is inconsistent between
+them; all four differ from the IDs published in Nebius's own docs and marketing.
 
-Only the Super ID above is confirmed. **Resolve exact model IDs with `GET /v1/models` before hardcoding any other one** — do not guess an ID from the marketing name.
+| Model | ID | Context |
+|---|---|---|
+| Nano 30B | `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B` | 262,144 |
+| Super 120B | `nvidia/nemotron-3-super-120b-a12b` | 262,144 |
+| Ultra 550B | `nvidia/Nemotron-3-Ultra-550b-a55b` | 1,048,576 |
+| 3.5 Lightning | `nvidia/Nemotron-3_5-Lightning` | 1,048,576 |
 
-Route cheap calls to Nano and reserve Ultra for real reasoning; credits are finite.
+Nano Omni and any reranker are **not** in this account's catalog. No attachment OCR,
+no `/v1/rerank` — retrieval is `embed()` + cosine.
 
 ## Secrets
 
@@ -101,12 +103,23 @@ training cutoff — read `node_modules/next/dist/docs/` before writing App Route
 - **No database, no OAuth, no live mail on the demo path.** Judging is Dec 1–15, twelve weeks
   after submission closes. Free Postgres tiers expire at 30 days, Google OAuth test-mode
   consent at 7. Seeded corpus is committed JSON; user mutations go to browser localStorage.
-- **Retrieve, never stuff context.** All Nemotrons misread exact facts past ~100k tokens. Use
-  `embed()` + `/v1/rerank` to pull candidate ledger rows; never pass the whole ledger.
+- **Retrieve, never stuff context.** All Nemotrons misread exact facts past ~100k tokens.
+  `selectCandidates()` passes same-thread rows plus top-6 by cosine, capped at 8. Never the
+  whole ledger.
 - **Every ledger row needs a verbatim evidence quote.** A row without a receipt is a guess,
   and the product's premise is that the ledger can be trusted.
-- Extraction is Nano at `reasoning_effort: "none"`; reconciliation is Super at `"high"`.
-  Ultra stays unused on purpose — say so in the README rather than adding a token call.
+- **The cascade is measured, not assumed** (`docs/FINDINGS.md` §7–8). Nano gates at
+  `reasoning_effort: "low"` — 100% recall, 55% of Super calls avoided. Super extracts at
+  ~95% precision; Nano managed ~60% because it cannot hold negative constraints, and
+  commitment extraction is mostly negative constraints. Do not "optimize" extraction back
+  onto Nano without re-running the eval.
+- **Nano breaks at `reasoning_effort` `none` and `high`** — empty content and a runaway
+  whitespace loop respectively. `safeEffort()` clamps it to `low`. Do not remove that clamp.
+- **`seed` is accepted but does not give reproducibility.** The ledger is a build artifact
+  gated by `npm run test:ledger`, not a runtime computation. Rebuild deliberately, never in CI.
+- **Assert on structure, not phrasing, in ledger tests.** The model rewords `what` between
+  builds; a test pinned to a literal string fails on a correct result.
+- Ultra stays unused on purpose — say so in the README rather than adding a token call.
 
 ## Where things are written down
 
@@ -116,6 +129,13 @@ training cutoff — read `node_modules/next/dist/docs/` before writing App Route
 
 ## Repo state
 
-Day 0 scaffold. No corpus, no pipeline, no UI yet. Next: Day 1 extraction-precision eval
-against hand-labeled Enron messages — that gate decides whether the ledger tracks both
-directions or retreats to outbound-only.
+Days 0–3 done: pipeline works end to end and 21 acceptance assertions pass
+(`npm run test:ledger`). No UI yet — `app/page.tsx` is still the Next.js default.
+
+```bash
+npm run build:corpus   # seed threads -> data/corpus/messages.json
+npm run build:ledger   # gate -> extract -> reconcile -> data/ledger/baseline.json + cache
+npm run test:ledger    # 21 acceptance assertions against the committed ledger
+```
+
+Next: Day 4, ledger UI and memory screen. See `docs/TASKS.md`.
