@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Kept's visual language: a ledger, not a dashboard.
+ *
+ * The reference is a well-set financial statement - quiet paper, dense rows,
+ * restrained rules, and exactly one accent that means "this is late". Color is
+ * information here, never decoration: if everything is urgent, nothing is.
+ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --paper: #fbfaf7;
+  --surface: #ffffff;
+  --ink: #17161a;
+  --ink-soft: #55525c;
+  --ink-faint: #8b8892;
+  --rule: #e6e3dc;
+  --rule-strong: #d3cfc5;
+
+  --overdue: #a3341f;
+  --overdue-bg: #fdf1ee;
+  --settled: #2f6b4f;
+  --settled-bg: #eef5f1;
+  --pending: #6b5e2f;
+  --pending-bg: #faf6e8;
+  --accent: #2d4a7c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #131317;
+    --surface: #1a1a20;
+    --ink: #eceaf0;
+    --ink-soft: #a5a2ad;
+    --ink-faint: #75727d;
+    --rule: #2b2b33;
+    --rule-strong: #3c3b45;
+
+    --overdue: #e8836a;
+    --overdue-bg: #2a1a17;
+    --settled: #7cc19c;
+    --settled-bg: #17241d;
+    --pending: #d4bd76;
+    --pending-bg: #242015;
+    --accent: #8fb0e0;
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-overdue: var(--overdue);
+  --color-overdue-bg: var(--overdue-bg);
+  --color-settled: var(--settled);
+  --color-settled-bg: var(--settled-bg);
+  --color-pending: var(--pending);
+  --color-pending-bg: var(--pending-bg);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* A quoted receipt. The whole product rests on these being believable, so they
+   are set apart as evidence rather than styled as ordinary body copy. */
+.receipt {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  border-left: 2px solid var(--rule-strong);
+  padding-left: 0.875rem;
+  color: var(--ink-soft);
+  white-space: pre-wrap;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
