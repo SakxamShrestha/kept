@@ -18,8 +18,8 @@
   },
   {
     "id": "c003",
-    "direction": "owed_to_me",
-    "counterparty": "sam@okaforconsulting.com",
+    "direction": "owed_by_me",
+    "counterparty": "marcus@acmelogistics.com",
     "what": "have the scoring rubric itself over to you",
     "due_text": "by Wednesday",
     "due_iso": "2026-09-09T17:00:00.000Z",
@@ -37,7 +37,7 @@
         "at": "2026-09-10T09:05:00.000Z",
         "evidence_message_id": "vendor-shortlist-2@okaforconsulting.com",
         "evidence_quote": "Attached is the scoring rubric as promised.",
-        "rationale": "Email confirms delivery of the scoring rubric, satisfying the commitment."
+        "rationale": "The email states the scoring rubric is attached, indicating delivery of the item owed."
       }
     ]
   },

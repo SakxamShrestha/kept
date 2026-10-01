@@ -228,6 +228,34 @@ function cleanDue(due: string, msg: Message): string {
 }
 
 /**
+ * Correct the direction from the envelope rather than trusting the model.
+ *
+ * Observed failure: "I'll have the scoring rubric over to you by Wednesday",
+ * sent BY the mailbox owner, came back as `owed_to_me` with the owner recorded
+ * as the counterparty. That inverts the ledger — it says the recipient owes the
+ * sender the very thing the sender promised — and it is the single most
+ * damaging error the product can make, because it chases the wrong person.
+ *
+ * Direction is not a judgment call when the promise is in the first person: the
+ * sender is the one making it. That is checkable from the headers, so check it
+ * rather than asking. Third-person promises ("the IT group will ship it") carry
+ * no such signal, so the model's answer stands.
+ */
+const FIRST_PERSON = /\b(i['’]?(ll|m| will| shall| can)|we['’]?(ll|re| will| shall| can))\b/i;
+
+function correctDirection(
+  c: Commitment,
+  msg: Message,
+  ownerAddresses: string[],
+): Direction {
+  if (!FIRST_PERSON.test(c.evidence_quote)) return c.direction;
+  const senderIsOwner = ownerAddresses.some(
+    (a) => a.toLowerCase() === msg.from.toLowerCase(),
+  );
+  return senderIsOwner ? "owed_by_me" : "owed_to_me";
+}
+
+/**
  * When the owner is the one promising, the model often leaves counterparty
  * blank - from inside the sentence "I'll have the process map over to you"
  * there is no name to copy. The mailbox knows who "you" is, so fill it from the
@@ -284,13 +312,22 @@ export async function extractFromMessage(
   const { kept, rejected } = verifyQuotes(res.data.commitments ?? [], msg);
 
   return {
-    commitments: kept.map((c) => ({
-      ...c,
-      counterparty: c.counterparty?.trim() || inferCounterparty(c.direction, msg, ownerAddresses),
-      message_id: msg.id,
-      thread_id: msg.thread_id,
-      stated_at: msg.date_iso,
-    })),
+    commitments: kept.map((c) => {
+      const direction = correctDirection(c, msg, ownerAddresses);
+      const named = c.counterparty?.trim() ?? "";
+      // The owner is never their own counterparty. When the model names them,
+      // it has confused the two sides, so fall back to the envelope.
+      const ownerNamed = ownerAddresses.some((a) => a.toLowerCase() === named.toLowerCase());
+      return {
+        ...c,
+        direction,
+        counterparty:
+          !named || ownerNamed ? inferCounterparty(direction, msg, ownerAddresses) : named,
+        message_id: msg.id,
+        thread_id: msg.thread_id,
+        stated_at: msg.date_iso,
+      };
+    }),
     rejected,
     model: res.model,
     source: res.source,

@@ -16,6 +16,17 @@ const ledger: LedgerRow[] = JSON.parse(await readFile("data/ledger/baseline.json
 const meta = JSON.parse(await readFile("data/corpus/meta.json", "utf8"));
 const TODAY: string = meta.today;
 
+// Who actually sent each message. Needed because a message ID carries the
+// MAILBOX's domain, not the sender's - `brightpath-silence-0@okaforconsulting.com`
+// was sent by tomas@brightpath.io. Inferring the sender from the ID reads every
+// inbound promise as one the owner made, which is how an earlier version of the
+// direction assertion below failed against a ledger that was entirely correct.
+const corpus: { id: string; from: string }[] = JSON.parse(
+  await readFile("data/corpus/messages.json", "utf8"),
+);
+const senderOf = new Map(corpus.map((m) => [m.id, m.from.toLowerCase()]));
+const OWNER: string = meta.owner.email.toLowerCase();
+
 let passed = 0;
 const failures: string[] = [];
 
@@ -52,8 +63,14 @@ check(
 // between runs ("get you those two" / "get the two vendors' paperwork"), and a
 // test that pins the phrasing fails on a pipeline that is working correctly.
 const vendorThread = vendorList?.origin.thread_id;
+// Direction, not just counterparty. The owner's own promise in this thread is
+// legitimately owed TO Marcus, so it carries his address too - matching on the
+// name alone picks up the owner's satisfied row and hides the open one.
 const marcusRows = ledger.filter(
-  (r) => r.origin.thread_id === vendorThread && /marcus/i.test(r.counterparty),
+  (r) =>
+    r.origin.thread_id === vendorThread &&
+    /marcus/i.test(r.counterparty) &&
+    r.direction === "owed_to_me",
 );
 check(
   "vendor-shortlist: the remainder became its own row owed by Marcus",
@@ -146,6 +163,34 @@ check(
   "no row invented a deadline it was not given",
   ledger.every((r) => (r.due_iso === null) === (r.due_text.trim() === "")),
 );
+// Direction is derived from the envelope, not the model's judgement. A build
+// once recorded the owner's own promise as owed_to_me with the owner as the
+// counterparty, which inverts the ledger and would chase the wrong person.
+check(
+  "the owner is never their own counterparty",
+  ledger.every((r) => r.counterparty.toLowerCase() !== meta.owner.email.toLowerCase()),
+  ledger.find((r) => r.counterparty.toLowerCase() === meta.owner.email.toLowerCase())?.id,
+);
+// Every first-person promise, checked against the envelope in both directions:
+// the sender of "I'll do X" owes X, whoever they are.
+const misdirected = ledger.filter((r) => {
+  if (!/\bI['’]?(ll| will)\b/i.test(r.origin.quote)) return false;
+  const sender = senderOf.get(r.origin.message_id);
+  if (!sender) return false;
+  const expected = sender === OWNER ? "owed_by_me" : "owed_to_me";
+  return r.direction !== expected;
+});
+check(
+  "first-person promises are owed by whoever sent them",
+  misdirected.length === 0,
+  misdirected.map((r) => `${r.id} is ${r.direction}`).join(", "),
+);
+check(
+  "the scoring rubric is owed BY the owner, to Marcus",
+  rubric?.direction === "owed_by_me" && /marcus/i.test(rubric?.counterparty ?? ""),
+  `${rubric?.direction} / ${rubric?.counterparty}`,
+);
+
 check(
   "every transition in history has a rationale and evidence",
   ledger.every((r) => r.history.every((h) => h.rationale.trim() && h.evidence_quote.trim())),
