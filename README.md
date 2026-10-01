@@ -19,7 +19,12 @@ Built for the [Nebius x NVIDIA Global AI Hackathon](https://nebiusglobalaihackat
 
 ## Demo
 
-_TBD — hosted URL and demo credentials._
+**https://kept-indol.vercel.app**
+
+No login, no Google account, no credentials of any kind — the ledger is a committed
+file and renders with no API key present. Two things on the page call a model at
+request time and both label themselves when they do: **Run now** on the unreconciled
+message at the top, and **Draft a chase** inside any expanded row.
 
 The demo opens on a seeded mailbox and needs no login and no Google account. You can
 also drop in your own Google Takeout `.mbox`; it is parsed **in your browser** and
