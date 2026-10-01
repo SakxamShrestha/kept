@@ -20,7 +20,16 @@ export const BASE_URL = (
   process.env.NEBIUS_BASE_URL ?? "https://api.tokenfactory.nebius.com/v1"
 ).replace(/\/+$/, "");
 
-const CACHE_DIR = path.join(process.cwd(), "data", "cache");
+/**
+ * Where cached responses land. Overridable so an optimization run can keep its
+ * own cache: the loop re-runs the same prompts hundreds of times, and writing
+ * that into data/cache would bloat the COMMITTED demo cache that the rot test
+ * depends on. Role-namespaced key construction is unaffected - this only moves
+ * where the files go. See loop/PROJECT.md.
+ */
+const CACHE_DIR = process.env.NEBIUS_CACHE_DIR
+  ? path.resolve(process.env.NEBIUS_CACHE_DIR)
+  : path.join(process.cwd(), "data", "cache");
 
 /** Logical job a call performs. Cache keys are namespaced by this, so swapping
  *  the underlying model does not orphan a cached demo response. */
@@ -32,7 +41,13 @@ const CHAINS: Record<Role, string> = {
   gate: process.env.MODEL_GATE ?? "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
   extract: process.env.MODEL_EXTRACT ?? "nvidia/nemotron-3-super-120b-a12b",
   reconcile: process.env.MODEL_RECONCILE ?? "nvidia/nemotron-3-super-120b-a12b",
-  draft: process.env.MODEL_RECONCILE ?? "nvidia/nemotron-3-super-120b-a12b",
+  // MODEL_DRAFT first, falling back to MODEL_RECONCILE so an existing override
+  // keeps working. Drafting is a different task shape from reconciliation and
+  // deserves its own knob; it previously had no way to be set independently.
+  draft:
+    process.env.MODEL_DRAFT ??
+    process.env.MODEL_RECONCILE ??
+    "nvidia/nemotron-3-super-120b-a12b",
 };
 
 export function modelChain(role: Role): string[] {
