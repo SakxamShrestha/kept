@@ -24,8 +24,16 @@ export interface CorpusMeta {
 }
 
 export interface DisplayRow extends LedgerRow {
+  /** Still owed and past its date, as of the demo clock. Always false once a
+   *  row is terminal — a delivered promise is not overdue, however long ago it
+   *  was due. */
   overdue: boolean;
   daysLate: number;
+  /** Whether a closed row was late WHEN IT CLOSED. Judging a settled row
+   *  against today instead of its closing date is how someone who delivered on
+   *  the day they promised gets recorded as having slipped. */
+  wasLate: boolean;
+  daysLateAtClose: number;
   /** Below this the row is a suggestion, not a claim, and is quarantined into
    *  the "needs review" bucket rather than stated as fact in the main ledger. */
   lowConfidence: boolean;
@@ -72,11 +80,18 @@ export function displayName(email: string, meta: CorpusMeta): string {
 
 export function decorate(rows: LedgerRow[], meta: CorpusMeta): DisplayRow[] {
   return rows.map((r) => {
-    const { overdue, daysLate } = overdueAs(r.due_iso, meta.today);
+    const live = isLive(r);
+    // A closed row is judged against the day it closed, not against today.
+    const closedAt = r.history.at(-1)?.at ?? null;
+    const atClose = overdueAs(r.due_iso, closedAt ?? meta.today);
+    const now = overdueAs(r.due_iso, meta.today);
+
     return {
       ...r,
-      overdue,
-      daysLate,
+      overdue: live && now.overdue,
+      daysLate: live ? now.daysLate : 0,
+      wasLate: live ? now.overdue : atClose.overdue,
+      daysLateAtClose: live ? now.daysLate : atClose.daysLate,
       lowConfidence: r.confidence < LOW_CONFIDENCE,
       counterpartyName: displayName(r.counterparty, meta),
     };
@@ -172,16 +187,19 @@ export function reliability(rows: DisplayRow[], meta: CorpusMeta): Reliability[]
   return [...byParty.entries()]
     .map(([counterparty, list]) => {
       const kept = list.filter((r) => r.state === "satisfied").length;
-      const lateOnes = list.filter((r) => r.overdue);
+      // wasLate, not overdue: someone who delivered on the day they promised
+      // must never be recorded as having slipped just because that day has
+      // since passed.
+      const lateOnes = list.filter((r) => r.wasLate);
       return {
         counterparty,
         name: displayName(counterparty, meta),
         promised: list.length,
         kept,
         slipped: lateOnes.length,
-        openOverdue: lateOnes.filter(isLive).length,
+        openOverdue: list.filter((r) => r.overdue).length,
         avgDaysLate: lateOnes.length
-          ? Math.round(lateOnes.reduce((n, r) => n + r.daysLate, 0) / lateOnes.length)
+          ? Math.round(lateOnes.reduce((n, r) => n + r.daysLateAtClose, 0) / lateOnes.length)
           : 0,
       };
     })
