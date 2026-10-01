@@ -1,0 +1,16 @@
+{
+  "note": "Mail that has NOT been reconciled into data/ledger/baseline.json. It is the thing 'Run now' applies, so the demo can show reconciliation happening rather than describing it. Deliberately kept out of data/corpus/messages.json: scripts/build-ledger.mts reconciles every message in that file, so anything in it is already applied by the time the page renders. Keeping these separate means the committed baseline, its 24 acceptance assertions and the 18 rot checks are all untouched by this feature. Hand-authored in the same shape build-corpus.mts emits, continuing the vendor-shortlist thread by its real thread_id so same-thread candidate selection resolves.",
+  "messages": [
+    {
+      "id": "vendor-shortlist-4@okaforconsulting.com",
+      "thread_id": "faa805909d494b47",
+      "from": "marcus@acmelogistics.com",
+      "to": ["sam@okaforconsulting.com"],
+      "cc": [],
+      "subject": "Re: Vendor shortlist for the Q4 RFP",
+      "date_iso": "2026-09-23T15:20:00.000Z",
+      "body_text": "Sam - legal cleared both of them this morning, so here they are. Delacroix Freight and Halvorsen Group paperwork attached. That is the full thirteen now.\n\nSorry again for the wait on those two.\n\nMarcus",
+      "beat": "Marcus delivers the two outstanding vendors on the day he promised. Closes c009 outright, and should complete c004 as well, which has been partially_satisfied since the 22nd. Two rows moving from one message is the clearest thing reconciliation does, and it is the reason this message says 'that is the full thirteen' rather than only naming the two. Dated the demo's today (meta.today = 2026-09-23) so it reads as mail that just arrived. Carries no new promise of its own, so nothing new should be extracted from it - if a row appears, extraction has over-read an apology."
+    }
+  ]
+}

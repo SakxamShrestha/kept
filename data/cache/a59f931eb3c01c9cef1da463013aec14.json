@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Diligence summary",
+    "body": "Hi Ana,  I wanted to touch base about the comparables table. On Sept 18 I wrote: "
+  },
+  "raw": "{\"subject\": \"Re: Diligence summary\", \"body\": \"Hi Ana,  I wanted to touch base about the comparables table. On Sept 18 I wrote: \"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1388,
+    "prompt_tokens": 1283,
+    "total_tokens": 2671,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1346,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1283
+  }
+}

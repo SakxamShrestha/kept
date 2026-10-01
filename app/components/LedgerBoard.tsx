@@ -6,13 +6,16 @@ import type { DisplayRow, LedgerView } from "@/lib/ledger";
 import {
   addRule,
   dismissRow,
+  loadApplied,
   loadDismissed,
   loadRules,
   restoreRow,
   ruleFromRejection,
   saveRules,
+  type AppliedReconciliation,
 } from "@/lib/policy";
 import { CommitmentRow, type RowContext } from "./CommitmentRow";
+import { InboxNotice, type InboxMessage } from "./InboxNotice";
 import { plural } from "./format";
 
 interface LastCorrection {
@@ -36,16 +39,32 @@ export function LedgerBoard({
   view,
   allRows,
   ctx,
+  inbox = [],
 }: {
   view: LedgerView;
   allRows: DisplayRow[];
   ctx: RowContext;
+  /** Mail that has not been reconciled into the committed ledger. Empty when
+   *  there is none held back, and the notice then renders nothing. */
+  inbox?: InboxMessage[];
 }) {
   const [dismissed, setDismissed] = useState<string[]>([]);
   const [last, setLast] = useState<LastCorrection | null>(null);
+  // Starts empty so the server render and the first client render agree; a
+  // reconciliation this viewer already ran arrives after mount.
+  const [applied, setApplied] = useState<AppliedReconciliation>({
+    messageIds: [],
+    view: null,
+    changed: [],
+    newRowIds: [],
+    at: "",
+  });
 
   useEffect(() => {
-    const sync = () => setDismissed(loadDismissed());
+    const sync = () => {
+      setDismissed(loadDismissed());
+      setApplied(loadApplied());
+    };
     sync();
     window.addEventListener("kept:storage", sync);
     window.addEventListener("storage", sync);
@@ -86,17 +105,26 @@ export function LedgerBoard({
 
   const kept = (rows: DisplayRow[]) => rows.filter((r) => !dismissed.includes(r.id));
 
-  const owedByMe = kept(view.owedByMe);
-  const owedToMe = kept(view.owedToMe);
-  const needsReview = kept(view.needsReview);
-  const dropped = allRows.filter((r) => dismissed.includes(r.id));
+  // Once this viewer has run a reconciliation, the server's recomputed view
+  // replaces the committed one wholesale. Taking the server's answer verbatim
+  // rather than patching rows here is what keeps the client's idea of the ledger
+  // from drifting out of step with the overdue arithmetic and the sort order.
+  const live = applied.view ?? view;
+
+  const owedByMe = kept(live.owedByMe);
+  const owedToMe = kept(live.owedToMe);
+  const needsReview = kept(live.needsReview);
+  const everyRow = applied.view
+    ? [...live.owedByMe, ...live.owedToMe, ...live.needsReview, ...live.closed]
+    : allRows;
+  const dropped = everyRow.filter((r) => dismissed.includes(r.id));
 
   // view.stats is the truth until the viewer corrects something; after that it
   // is recomputed so the sentence at the top can never contradict the columns
   // under it.
   const stats =
     dismissed.length === 0
-      ? view.stats
+      ? live.stats
       : {
           owedByMe: owedByMe.length,
           owedToMe: owedToMe.length,
@@ -107,6 +135,10 @@ export function LedgerBoard({
 
   return (
     <div className="space-y-10">
+      {inbox.length > 0 ? (
+        <InboxNotice inbox={inbox} applied={applied} onApplied={setApplied} />
+      ) : null}
+
       <section>
         <p className="max-w-2xl text-lg leading-relaxed text-ink">
           You owe <span className="tabular">{stats.owedByMe}</span>{" "}
@@ -143,8 +175,10 @@ export function LedgerBoard({
           ) : null}
         </p>
         <p className="mt-2 max-w-2xl text-xs leading-relaxed text-ink-faint">
-          Read from a ledger file committed to the repo. Nothing on this page calls a
-          model, and every row opens to the sentence it was taken from.
+          Read from a ledger file committed to the repo — it renders with no API key at
+          all, and every row opens to the sentence it was taken from. Reconciling new
+          mail and drafting a chase are the two things here that call a model, and both
+          say so when they do.
         </p>
       </section>
 
@@ -213,13 +247,13 @@ export function LedgerBoard({
 
       <Drawer
         title="Settled"
-        count={view.closed.length}
+        count={live.closed.length}
         note="Delivered, cancelled, or abandoned. Kept rather than deleted, because the receipt is what proves it closed."
       >
-        {view.closed.length === 0 ? (
+        {live.closed.length === 0 ? (
           <p className="py-3 text-sm text-ink-soft">Nothing has closed yet.</p>
         ) : (
-          view.closed.map((row) => <CommitmentRow key={row.id} row={row} ctx={ctx} />)
+          live.closed.map((row) => <CommitmentRow key={row.id} row={row} ctx={ctx} />)
         )}
       </Drawer>
 

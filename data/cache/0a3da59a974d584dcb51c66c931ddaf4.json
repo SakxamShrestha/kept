@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "body": "Hi Marcus,On Sept 9 you said: ``I'll get you the full vendor list by end of day Friday.'' Today is Sept 23, and I’m still waiting for the two vendors you mentioned—Delacroix Freight and Halvorsen Group. If anything is blocking you on the legal side, let me know—I can help reach out to our contacts. Could you please send those by end of day Thursday?Thanks,Sam"
+  },
+  "raw": "{\"subject\": \"Re: Vendor shortlist for the Q4 RFP\", \"body\": \"Hi Marcus,On Sept 9 you said: ``I'll get you the full vendor list by end of day Friday.'' Today is Sept 23, and I’m still waiting for the two vendors you mentioned—Delacroix Freight and Halvorsen Group. If anything is blocking you on the legal side, let me know—I can help reach out to our contacts. Could you please send those by end of day Thursday?Thanks,Sam\"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1670,
+    "prompt_tokens": 1392,
+    "total_tokens": 3062,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1552,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1392
+  }
+}

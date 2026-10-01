@@ -1,0 +1,27 @@
+{
+  "data": {
+    "subject": "Re: Invoice discrepancy",
+    "body": "Hi Kwame,<br><br>On Sept 17 you wrote: &quot;Odd. I'll look into it with our finance team and get back to you.&quot; Just checking in to see if there's any update on the invoice discrepancy. Happy to help unblock anything on our end. Let me know a good time to reconnect or if there's something you need from me. No rush, just want to keep it moving.<br><br>Sam"
+  },
+  "raw": "{\n  \"subject\": \"Re: Invoice discrepancy\",\n  \"body\": \"Hi Kwame,<br><br>On Sept 17 you wrote: &quot;Odd. I'll look into it with our finance team and get back to you.&quot; Just checking in to see if there's any update on the invoice discrepancy. Happy to help unblock anything on our end. Let me know a good time to reconnect or if there's something you need from me. No rush, just want to keep it moving.<br><br>Sam\"\n}",
+  "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1756,
+    "prompt_tokens": 1266,
+    "total_tokens": 3022,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1637,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1266
+  }
+}

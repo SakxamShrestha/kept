@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { DisplayRow, LedgerState } from "@/lib/ledger";
 import { StateChip } from "./StateChip";
+import { ChaseComposer } from "./ChaseComposer";
 import { fmtDate, plural } from "./format";
 
 /**
@@ -175,6 +176,12 @@ export function CommitmentRow({
             </>
           ) : null}
         </dl>
+
+        {/* Outside the <dl> on purpose: a subject line and a body editor do not
+            fit the 6.5rem label column, and the composer reads better given the
+            full width of the receipt. Only on rows still owed - there is nothing
+            to chase on a promise that was kept. */}
+        {stillOwed ? <ChaseComposer row={row} /> : null}
       </div>
     </details>
   );

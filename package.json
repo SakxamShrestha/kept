@@ -11,6 +11,7 @@
     "check:json": "node --env-file-if-exists=.env.local scripts/check-json.mjs",
     "build:corpus": "tsx scripts/build-corpus.mts",
     "build:ledger": "NEBIUS_CACHE_WRITE=1 tsx --env-file-if-exists=.env.local scripts/build-ledger.mts",
+    "prewarm": "NEBIUS_CACHE_WRITE=1 tsx --env-file-if-exists=.env.local scripts/prewarm-routes.mts",
     "test:ledger": "tsx evals/reconcile.test.mts",
     "test:rot": "tsx scripts/test-rot.mts",
     "loop:check": "tsx loop/evaluate/check.mts",

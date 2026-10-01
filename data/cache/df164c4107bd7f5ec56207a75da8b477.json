@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "body": "Hi Marcus,<br><br>Just checking in on the two vendors' paperwork you mentioned on Sept 22: "
+  },
+  "raw": "{\"subject\": \"Re: Vendor shortlist for the Q4 RFP\", \"body\": \"Hi Marcus,<br><br>Just checking in on the two vendors' paperwork you mentioned on Sept 22: \"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1529,
+    "prompt_tokens": 1283,
+    "total_tokens": 2812,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1479,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1283
+  }
+}

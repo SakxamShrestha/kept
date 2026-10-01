@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "body": "Hi Marcus,<br><br>On Sept 9 you said you'd &quot;get me the full vendor list by end of day Friday&quot;. That commitment is now 12 days overdue. On Sept 22 you reported &quot;Sending over what I have so far: eleven of the thirteen vendors, attached. Still chasing Delacroix Freight and Halvorsen Group, their paperwork is stuck with our legal team. I will get you those two by Thursday.&quot; Yet the remaining two vendors are still missing. Please provide a firm date by which you will deliver the outstanding items.<br><br>Thanks,<br>Sam"
+  },
+  "raw": "{\"subject\": \"Re: Vendor shortlist for the Q4 RFP\", \"body\": \"Hi Marcus,<br><br>On Sept 9 you said you'd &quot;get me the full vendor list by end of day Friday&quot;. That commitment is now 12 days overdue. On Sept 22 you reported &quot;Sending over what I have so far: eleven of the thirteen vendors, attached. Still chasing Delacroix Freight and Halvorsen Group, their paperwork is stuck with our legal team. I will get you those two by Thursday.&quot; Yet the remaining two vendors are still missing. Please provide a firm date by which you will deliver the outstanding items.<br><br>Thanks,<br>Sam\"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1797,
+    "prompt_tokens": 1391,
+    "total_tokens": 3188,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1634,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1391
+  }
+}

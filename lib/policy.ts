@@ -11,6 +11,8 @@
  * it means the demo has nothing that can expire between submission and judging.
  */
 
+import type { LedgerView } from "./ledger";
+
 export const POLICY_KEY = "kept.policy.v1";
 export const PLAYBOOK_KEY = "kept.playbooks.v1";
 export const SCOPES_KEY = "kept.scopes.v1";
@@ -139,6 +141,44 @@ export function appendCallLog(entry: CallLogEntry): void {
   const log = loadCallLog();
   write(CALLLOG_KEY, [entry, ...log].slice(0, 200));
 }
+
+/**
+ * Mail this viewer has reconciled with "Run now", and the ledger that resulted.
+ *
+ * The committed baseline stays the shared starting point and is never written -
+ * it cannot be, on a read-only serverless filesystem, and it is the artifact the
+ * acceptance tests are pinned to. So an applied reconciliation lives here, per
+ * viewer, which also means one judge cannot spend the demo for the next one.
+ *
+ * The whole recomputed view is stored rather than a list of transitions, because
+ * bucketing a row needs the frozen demo clock and the overdue arithmetic that
+ * lib/ledger.ts does on the server. Keeping the server's answer verbatim is what
+ * stops the client's idea of the ledger drifting from the rendered page's.
+ */
+export const APPLIED_KEY = "kept.applied.v1";
+
+export interface AppliedReconciliation {
+  messageIds: string[];
+  /** lib/ledger's LedgerView. Imported as a type only - lib/ledger reads the
+   *  filesystem, so its runtime cannot cross into a client component. */
+  view: LedgerView | null;
+  /** What to tell the viewer happened, kept so the summary survives a reload. */
+  changed: { id: string; what: string; state: string; quote: string; rationale: string }[];
+  newRowIds: string[];
+  at: string;
+}
+
+const EMPTY_APPLIED: AppliedReconciliation = {
+  messageIds: [],
+  view: null,
+  changed: [],
+  newRowIds: [],
+  at: "",
+};
+
+export const loadApplied = () => read<AppliedReconciliation>(APPLIED_KEY, EMPTY_APPLIED);
+export const saveApplied = (a: AppliedReconciliation) => write(APPLIED_KEY, a);
+export const clearApplied = () => write(APPLIED_KEY, EMPTY_APPLIED);
 
 /** Rows the user has dismissed. Kept separately from the rules so a dismissal
  *  survives even if its generated rule is later edited or deleted. */

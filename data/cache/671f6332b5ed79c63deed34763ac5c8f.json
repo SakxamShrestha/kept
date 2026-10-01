@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Staffing model draft",
+    "body": "Hi Dana,<p></p>On Sept 4 you said you’d “send me the staffing model draft by the 15th so I can fold it into the ops review.”<p></p>We later agreed to move the deadline to the 29th.<p></p>Just checking in to see if you’d like any help getting the draft ready—happy to jump on a quick call or review whatever you have so far.<p></p>Let me know what works best for you.<p></p>Thanks,<p></p>Sam"
+  },
+  "raw": "{\"subject\": \"Re: Staffing model draft\", \"body\": \"Hi Dana,<p></p>On Sept 4 you said you’d “send me the staffing model draft by the 15th so I can fold it into the ops review.”<p></p>We later agreed to move the deadline to the 29th.<p></p>Just checking in to see if you’d like any help getting the draft ready—happy to jump on a quick call or review whatever you have so far.<p></p>Let me know what works best for you.<p></p>Thanks,<p></p>Sam\"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 2052,
+    "prompt_tokens": 1345,
+    "total_tokens": 3397,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1914,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1345
+  }
+}

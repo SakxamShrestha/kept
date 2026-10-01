@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Vendor shortlist for the Q4 RFP",
+    "body": "Hi Marcus,<br><br>On Sept 9 you said you'd &quot;get me the full vendor list by end of day Friday&quot;. Today is Sept 23, which is 12 days past that deadline. On Sept 22 you noted you had sent eleven of the thirteen vendors and would get the remaining two by Thursday. Please confirm whether you still need those two vendors or if we can close this item. If I don't hear otherwise, I'll treat this as closed.<br><br>Thanks,<br>Sam"
+  },
+  "raw": "{\"subject\": \"Re: Vendor shortlist for the Q4 RFP\", \"body\": \"Hi Marcus,<br><br>On Sept 9 you said you'd &quot;get me the full vendor list by end of day Friday&quot;. Today is Sept 23, which is 12 days past that deadline. On Sept 22 you noted you had sent eleven of the thirteen vendors and would get the remaining two by Thursday. Please confirm whether you still need those two vendors or if we can close this item. If I don't hear otherwise, I'll treat this as closed.<br><br>Thanks,<br>Sam\"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1772,
+    "prompt_tokens": 1385,
+    "total_tokens": 3157,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1633,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1385
+  }
+}

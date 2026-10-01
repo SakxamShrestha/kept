@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Process map for the intake team",
+    "body": "Hi Priya,<br><br>I wanted to follow up on my promise from Sept 2 where I said, &#34;I&#39;ll have the process map over to you by the 12th.&#34; I see that date has passed and I apologize for the delay. I&#39;m committing to send you the completed process map by Sept 30, 2026. Please let me know if there&#39;s anything I can do to help unblock this on your end.<br><br>Thanks,<br>Sam"
+  },
+  "raw": "{\"subject\": \"Re: Process map for the intake team\", \"body\": \"Hi Priya,<br><br>I wanted to follow up on my promise from Sept 2 where I said, &#34;I&#39;ll have the process map over to you by the 12th.&#34; I see that date has passed and I apologize for the delay. I&#39;m committing to send you the completed process map by Sept 30, 2026. Please let me know if there&#39;s anything I can do to help unblock this on your end.<br><br>Thanks,<br>Sam\"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1142,
+    "prompt_tokens": 1288,
+    "total_tokens": 2430,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 997,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1288
+  }
+}

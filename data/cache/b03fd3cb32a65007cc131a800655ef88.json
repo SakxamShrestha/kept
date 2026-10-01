@@ -1,0 +1,42 @@
+{
+  "data": {
+    "transitions": [
+      {
+        "commitment_id": "c004",
+        "new_state": "satisfied",
+        "evidence_quote": "That is the full thirteen now.",
+        "rationale": "Marcus delivered the remaining vendor paperwork, completing the full vendor list as promised.",
+        "new_due_text": ""
+      },
+      {
+        "commitment_id": "c009",
+        "new_state": "satisfied",
+        "evidence_quote": "Delacroix Freight and Halvorsen Group paperwork attached.",
+        "rationale": "He provided the two vendors' paperwork, fulfilling the commitment.",
+        "new_due_text": ""
+      }
+    ]
+  },
+  "raw": "{\"transitions\": [{\"commitment_id\": \"c004\", \"new_state\": \"satisfied\", \"evidence_quote\": \"That is the full thirteen now.\", \"rationale\": \"Marcus delivered the remaining vendor paperwork, completing the full vendor list as promised.\", \"new_due_text\": \"\"}, {\"commitment_id\": \"c009\", \"new_state\": \"satisfied\", \"evidence_quote\": \"Delacroix Freight and Halvorsen Group paperwork attached.\", \"rationale\": \"He provided the two vendors' paperwork, fulfilling the commitment.\", \"new_due_text\": \"\"}]}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 799,
+    "prompt_tokens": 644,
+    "total_tokens": 1443,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 661,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 644
+  }
+}

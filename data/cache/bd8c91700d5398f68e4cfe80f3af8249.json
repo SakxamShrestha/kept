@@ -1,0 +1,28 @@
+{
+  "data": {
+    "subject": "Re: Integration spec",
+    "body": "Hi Tomas,<NL><NL>On Aug 12 you said you'd ``put together the integration spec for the warehouse endpoints and get it to me next week.''<NL><NL>It's now been 35 days and I haven't seen the spec yet.<NL><NL>Could you let me know when I can expect it, or if there's anything I can do to help unblock it?<NL><NL>Thanks for the update.<NL><NL>Sam"
+  },
+  "raw": "{\"subject\": \"Re: Integration spec\", \"body\": \"Hi Tomas,<NL><NL>On Aug 12 you said you'd ``put together the integration spec for the warehouse endpoints and get it to me next week.''<NL><NL>It's now been 35 days and I haven't seen the spec yet.<NL><NL>Could you let me know when I can expect it, or if there's anything I can do to help unblock it?<NL><NL>Thanks for the update.<NL><NL>Sam\"}",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "source": "live",
+  "usage": {
+    "completion_tokens": 1464,
+    "prompt_tokens": 1291,
+    "total_tokens": 2755,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1347,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1291
+  }
+}
