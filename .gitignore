@@ -45,3 +45,6 @@ next-env.d.ts
 
 # local eval corpus (Enron is non-commercial research use - never vendored)
 /evals/enron/
+
+# karpathy loop: per-iteration response cache, never the committed demo cache
+/loop/.cache/

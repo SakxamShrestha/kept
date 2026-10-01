@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-09-30",
+  "commit": "d352a31",
+  "note": "Counts are floors, not targets. loop:check fails if a suite runs FEWER assertions than this, because otherwise the cheapest way to make it green is to delete the failing one. Raise these numbers when assertions are added; never lower them to make a run pass.",
+  "gates": {
+    "G1_ledger_assertions": 24,
+    "G2_rot_checks": 18,
+    "G7_G8_invariants": 21
+  },
+  "scored": {
+    "note": "Empty until evals/labeled/extract-150.json exists. loop:eval fills these; see loop/PROJECT.md.",
+    "S1_extraction_precision": null,
+    "S2_extraction_recall": null,
+    "S3_f1": null,
+    "S4_tokens_per_pass": null,
+    "S5_super_calls_avoided": null
+  }
+}

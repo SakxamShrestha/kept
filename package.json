@@ -12,7 +12,9 @@
     "build:corpus": "tsx scripts/build-corpus.mts",
     "build:ledger": "NEBIUS_CACHE_WRITE=1 tsx --env-file-if-exists=.env.local scripts/build-ledger.mts",
     "test:ledger": "tsx evals/reconcile.test.mts",
-    "test:rot": "tsx scripts/test-rot.mts"
+    "test:rot": "tsx scripts/test-rot.mts",
+    "loop:check": "tsx loop/evaluate/check.mts",
+    "label": "tsx evals/label.mts"
   },
   "dependencies": {
     "chrono-node": "^2.10.1",
