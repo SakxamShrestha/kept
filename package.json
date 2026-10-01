@@ -14,7 +14,8 @@
     "test:ledger": "tsx evals/reconcile.test.mts",
     "test:rot": "tsx scripts/test-rot.mts",
     "loop:check": "tsx loop/evaluate/check.mts",
-    "label": "tsx evals/label.mts"
+    "label": "tsx evals/label.mts",
+    "loop:eval": "tsx --env-file-if-exists=.env.local loop/evaluate/score-extract.mts"
   },
   "dependencies": {
     "chrono-node": "^2.10.1",
