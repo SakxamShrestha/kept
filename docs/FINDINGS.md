@@ -215,3 +215,65 @@ A secondary lesson, learned the hard way: acceptance tests must assert on
 structure, not phrasing. A test matching the literal string `"those two"` failed
 on a build where the model wrote `"the two vendors' paperwork"` — a correct
 result, a broken test.
+
+---
+
+## 10. There is no way to cap spending, and a key cannot be scoped
+
+Measured 2026-10-03, while deciding whether two public API routes could safely
+have a key behind them.
+
+Token Factory returns rate-limit headers on every completion. On this account:
+
+```
+x-ratelimit-limit-requests: 100      per 1s
+x-ratelimit-limit-tokens:   800000   per 1s
+x-ratelimit-dynamic-period-remaining: 900s
+```
+
+100 requests per second. A single chase draft on Nemotron 3 Super is roughly 3,000
+tokens, so the request limit is the binding one, and it permits a throughput that
+would exhaust a $50 credit balance long before anyone noticed.
+
+Four things we looked for and could not find:
+
+1. **No hard spend cap.** Nebius budgets are alert-only. The documentation is
+   explicit: *"A budget does not stop or cap your usage."* Usage data *"updates
+   every few hours,"* and *"an alert can arrive after your spending has passed an
+   alert threshold."* So the alert is not a control, and during a burst it is not
+   even timely.
+2. **A rate limit cannot be lowered by its owner.** The rate-limit documentation
+   describes limits growing automatically with sustained use and an Enterprise
+   tier for more; there is no documented way to request *less*, which is what
+   anyone exposing a public endpoint actually wants.
+3. **No per-key or per-project ceiling.** An API key carries no scope and no
+   budget of its own, so a key used by a public demo has the same authority as a
+   key used from a laptop.
+4. **No billing or quota endpoints on the inference API.** `/v1/billing`,
+   `/v1/billing/usage`, `/v1/usage`, `/v1/quota`, `/v1/limits`, `/v1/credits`,
+   `/v1/me`, `/v1/organization` and `/v1/dashboard/billing/subscription` all
+   return `404 {"detail":"Not Found"}`. There is no programmatic way for an
+   application to read its own remaining balance and stop itself.
+
+### Why this matters for the obvious use case
+
+A hackathon demo is a public URL with a key behind it. That is the single most
+common shape of a Token Factory deployment, and the platform currently offers no
+primitive that bounds its cost. The only available controls are outside the
+platform: ship a response cache and refuse anything not in it, which is what this
+project does (`lib/demo-gate.ts`).
+
+### What would fix it
+
+Any one of these would be enough, roughly in order of usefulness:
+
+- A hard spend ceiling per account or per project that returns `429`/`402` when
+  reached, rather than an email some hours later.
+- Per-key budgets and per-key rate limits, set by the owner at key creation.
+- A self-service way to *lower* a rate limit.
+- A `GET` endpoint exposing remaining credit, so an application can throttle
+  itself.
+
+The rate-limit headers are genuinely good — per-request, with both request and
+token windows and a dynamic-scaling window. They are the right shape. The gap is
+that nothing equivalent exists for money.
