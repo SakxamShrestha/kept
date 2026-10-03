@@ -55,8 +55,10 @@ export default async function LedgerPage() {
 
   return (
     <>
-      <h1 className="mb-3 text-[0.6875rem] uppercase tracking-[0.18em] text-ink-faint">
-        Ledger
+      {/* The rail already says which section this is, so the heading spends
+          itself naming the thing underneath it instead of repeating the nav. */}
+      <h1 className="mb-6 text-[1.3125rem] font-semibold tracking-tight">
+        Where you stand
       </h1>
       <LedgerBoard
         view={view}

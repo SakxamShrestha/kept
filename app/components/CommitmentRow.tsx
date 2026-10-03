@@ -53,7 +53,10 @@ export function CommitmentRow({
   const stillOwed = !ctx.terminalStates.includes(row.state);
 
   return (
-    <details className="group border-b border-rule last:border-b-0">
+    <details
+      id={`row-${row.id}`}
+      className="group scroll-mt-24 border-b border-rule last:border-b-0"
+    >
       <summary className="flex cursor-pointer list-none items-baseline gap-4 py-3 [&::-webkit-details-marker]:hidden">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-2">

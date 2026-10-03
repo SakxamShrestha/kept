@@ -49,13 +49,13 @@ export default async function MemoryPage() {
 
   return (
     <>
-      <h1 className="mb-3 text-[0.6875rem] uppercase tracking-[0.18em] text-ink-faint">
-        Memory
+      <h1 className="text-[1.3125rem] font-semibold tracking-tight">
+        What Kept has learned from you
       </h1>
-      <p className="max-w-2xl text-lg leading-relaxed text-ink">
-        What Kept remembers between sessions, in the two forms it takes: rules you
-        taught it by correcting a row, and what the ledger has learned about who
-        actually delivers.
+      <p className="mt-2 max-w-[62ch] text-[0.9375rem] leading-relaxed text-ink-soft">
+        Memory here takes two forms: rules you taught it by correcting a row, and what
+        the ledger has worked out about who actually delivers. Both are readable and
+        both are yours to delete.
       </p>
       <p className="mt-2 max-w-2xl text-xs leading-relaxed text-ink-faint">
         No hidden embeddings, no profile you cannot read. Everything on the left is a

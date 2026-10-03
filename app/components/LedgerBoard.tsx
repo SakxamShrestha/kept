@@ -16,6 +16,7 @@ import {
 } from "@/lib/policy";
 import { CommitmentRow, type RowContext } from "./CommitmentRow";
 import { InboxNotice, type InboxMessage } from "./InboxNotice";
+import { BalanceLine } from "./BalanceLine";
 import { plural } from "./format";
 
 interface LastCorrection {
@@ -140,7 +141,9 @@ export function LedgerBoard({
       ) : null}
 
       <section>
-        <p className="max-w-2xl text-lg leading-relaxed text-ink">
+        <BalanceLine owedByMe={owedByMe} owedToMe={owedToMe} />
+
+        <p className="mt-7 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink">
           You owe <span className="tabular">{stats.owedByMe}</span>{" "}
           {plural(stats.owedByMe, "thing", "things")}
           {stats.overdueByMe > 0 ? (

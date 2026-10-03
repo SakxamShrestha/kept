@@ -6,6 +6,13 @@
  * The reference is a well-set financial statement - quiet paper, dense rows,
  * restrained rules, and exactly one accent that means "this is late". Color is
  * information here, never decoration: if everything is urgent, nothing is.
+ *
+ * Two rules follow from that and are worth stating, because they are what keep
+ * the page legible as it gets denser:
+ *
+ *   Oxblood only ever means late. Not "attention", not "primary".
+ *   Monospace only ever means quoted or counted. If it is set in mono, it is
+ *   either a verbatim receipt or a figure - never ordinary prose, never a label.
  */
 
 :root {
@@ -24,6 +31,13 @@
   --pending: #6b5e2f;
   --pending-bg: #faf6e8;
   --accent: #2d4a7c;
+
+  /* One step off paper, so the rail reads as the page's edge rather than as a
+     separate panel floating on it. */
+  --rail: #f3f1ea;
+  /* Keyboard selection in the search palette. The accent at low saturation, so
+     the highlight belongs to the same ink family as everything else. */
+  --select: #e9edf4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +57,9 @@
     --pending: #d4bd76;
     --pending-bg: #242015;
     --accent: #8fb0e0;
+
+    --rail: #0e0e12;
+    --select: #1e2430;
   }
 }
 
@@ -61,14 +78,20 @@
   --color-pending: var(--pending);
   --color-pending-bg: var(--pending-bg);
   --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
+  --color-rail: var(--rail);
+  --color-select: var(--select);
+  --font-sans: var(--font-archivo);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  /* Archivo rather than a neutral UI grotesque: it was cut for print, its
+     figures are properly tabular, and it holds up at the small sizes a dense
+     ledger needs. */
+  font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "cv05" 1;
 }
 
 /* A quoted receipt. The whole product rests on these being believable, so they
@@ -85,4 +108,61 @@ body {
 
 .tabular {
   font-variant-numeric: tabular-nums;
+}
+
+/*
+ * The statement of position.
+ *
+ * A ledger's defining object is a balance: two sides, read against each other.
+ * So the ledger screen opens with one - a single rule divided into what you owe
+ * and what you are owed, one segment per commitment, oxblood where a segment is
+ * late. It is the page's only piece of chart-like drawing, and it carries real
+ * counts rather than illustrating them.
+ */
+.balance {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  height: 0.5rem;
+}
+
+.balance-seg {
+  flex: 1 1 0;
+  min-width: 0.375rem;
+  background: var(--rule-strong);
+}
+
+.balance-seg[data-state="overdue"] {
+  background: var(--overdue);
+}
+
+.balance-seg[data-state="pending"] {
+  background: var(--pending);
+}
+
+/* The gap between the two sides, which is the thing being balanced. */
+.balance-gap {
+  flex: 0 0 2.5rem;
+  background: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .balance-seg {
+    transition: background-color 200ms ease;
+  }
+}
+
+/* Rows align as columns, so names, dates and states stack into real ledger
+   columns instead of each row re-deciding where its parts sit. */
+.ledger-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1.25rem;
+  align-items: baseline;
+}
+
+/* Visible keyboard focus everywhere, in ink rather than the browser's blue. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
