@@ -294,7 +294,7 @@ export interface ExtractResult {
 export async function extractFromMessage(
   msg: Message,
   ownerAddresses: string[],
-  opts: { noCache?: boolean } = {},
+  opts: { noCache?: boolean; cacheOnly?: boolean } = {},
 ): Promise<ExtractResult> {
   const res = await chat<{ commitments: Commitment[] }>({
     role: "extract",
@@ -302,6 +302,7 @@ export async function extractFromMessage(
     reasoningEffort: "low",
     maxTokens: 4096,
     noCache: opts.noCache,
+    cacheOnly: opts.cacheOnly,
     schema: { name: "commitments", schema: SCHEMA as unknown as Record<string, unknown> },
     messages: [
       { role: "system", content: SYSTEM },

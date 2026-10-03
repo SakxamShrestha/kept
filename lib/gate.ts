@@ -44,7 +44,7 @@ everything you pass through, but nothing re-reads what you reject.`;
 
 export async function shouldExtract(
   msg: Message,
-  opts: { noCache?: boolean } = {},
+  opts: { noCache?: boolean; cacheOnly?: boolean } = {},
 ): Promise<{ hasCommitment: boolean; model: string }> {
   try {
     const res = await chat<{ has_commitment: boolean }>({
@@ -52,6 +52,7 @@ export async function shouldExtract(
       reasoningEffort: "low",
       maxTokens: 512,
       noCache: opts.noCache,
+      cacheOnly: opts.cacheOnly,
       schema: { name: "gate", schema: SCHEMA as unknown as Record<string, unknown> },
       messages: [
         { role: "system", content: SYSTEM },

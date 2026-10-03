@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 import type { DisplayRow } from "@/lib/ledger";
-import { appendCallLog, DEFAULT_PLAYBOOKS, loadPlaybooks, type Playbook } from "@/lib/policy";
+import {
+  appendCallLog,
+  DEFAULT_PLAYBOOKS,
+  demoHeaders,
+  loadPlaybooks,
+  type Playbook,
+} from "@/lib/policy";
 
 /**
  * Draft a chase for one row.
@@ -67,7 +73,7 @@ export function ChaseComposer({ row }: { row: DisplayRow }) {
     try {
       const res = await fetch("/api/draft", {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json", ...demoHeaders() },
         body: JSON.stringify({ rowId: row.id, playbook }),
       });
       const payload = await res.json();

@@ -105,6 +105,16 @@ export interface ChatOptions {
   maxTokens?: number;
   /** Skip the disk cache for this call (used by "Run now" in the UI). */
   noCache?: boolean;
+  /**
+   * Answer from the committed cache or not at all.
+   *
+   * Token Factory has no hard spend cap - budgets alert but explicitly "do not
+   * stop or cap your usage", a key's rate limit cannot be lowered, and this
+   * account allows 100 requests a second. So a public route that can reach the
+   * live endpoint is an unmetered way to spend someone's credits. Requests that
+   * are not authorized to spend set this, and get the cache or an error.
+   */
+  cacheOnly?: boolean;
   seed?: number;
 }
 
@@ -153,6 +163,20 @@ async function writeCache(key: string, value: ChatResult): Promise<void> {
   }
 }
 
+/**
+ * Raised instead of calling the live endpoint when a request was not allowed to
+ * spend tokens and the answer was not already on disk. Carries the role so a
+ * caller can say which stage of the pipeline needed money.
+ */
+export class CacheMissError extends Error {
+  readonly role: Role;
+  constructor(role: Role) {
+    super(`No cached response for "${role}", and this request may not spend tokens.`);
+    this.name = "CacheMissError";
+    this.role = role;
+  }
+}
+
 /** True when the failure means "try the next model" rather than "give up". */
 function isModelUnavailable(status: number, body: string): boolean {
   if (status === 404) return true;
@@ -180,6 +204,9 @@ export async function chat<T = unknown>(opts: ChatOptions): Promise<ChatResult<T
     const hit = await readCache<T>(key);
     if (hit) return hit;
   }
+
+  // Checked after the cache read and before anything that costs money.
+  if (opts.cacheOnly) throw new CacheMissError(opts.role);
 
   const apiKey = process.env.NEBIUS_API_KEY;
   if (!apiKey) {

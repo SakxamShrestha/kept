@@ -180,6 +180,27 @@ export const loadApplied = () => read<AppliedReconciliation>(APPLIED_KEY, EMPTY_
 export const saveApplied = (a: AppliedReconciliation) => write(APPLIED_KEY, a);
 export const clearApplied = () => write(APPLIED_KEY, EMPTY_APPLIED);
 
+/**
+ * The demo token, if the viewer has one.
+ *
+ * Not a credential and not a login - nothing here is authenticated. It is the
+ * single capability the deployment withholds from the open internet: permission
+ * to make a model call that is not already in the shipped cache, and therefore
+ * costs money. Nebius offers no way to cap that from their side, so it is capped
+ * here. Reviewers get the token with the submission; everything the demo walks
+ * through is cached and needs nothing.
+ */
+export const DEMO_TOKEN_KEY = "kept.demotoken.v1";
+export const loadDemoToken = () => read<string>(DEMO_TOKEN_KEY, "");
+export const saveDemoToken = (token: string) => write(DEMO_TOKEN_KEY, token.trim());
+
+/** Headers for a request that might need to spend. Omits the token when there
+ *  is none, so an unguarded deployment behaves exactly as before. */
+export function demoHeaders(): Record<string, string> {
+  const token = loadDemoToken();
+  return token ? { "x-kept-demo": token } : {};
+}
+
 /** Rows the user has dismissed. Kept separately from the rules so a dismissal
  *  survives even if its generated rule is later edited or deleted. */
 export const DISMISSED_KEY = "kept.dismissed.v1";

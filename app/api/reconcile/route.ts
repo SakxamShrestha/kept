@@ -29,8 +29,10 @@
  *     an existing row.
  */
 
+import { liveCallsAllowed, spendRefused } from "@/lib/demo-gate";
 import { extractFromMessage, type Message } from "@/lib/extract";
 import { shouldExtract } from "@/lib/gate";
+import { CacheMissError } from "@/lib/nebius";
 import {
   buildView,
   decorate,
@@ -76,20 +78,22 @@ export async function POST(request: Request): Promise<Response> {
     );
   }
 
+  const cacheOnly = !liveCallsAllowed(request);
+
   try {
     const [baseline, meta] = await Promise.all([loadLedger(), loadMeta()]);
     const owner = [meta.owner.email];
 
     // Stage 0 of the cascade, same as the build. Nano is cheap and fails open,
     // so a false yes costs one Super call and a false no would lose a promise.
-    const gate = await shouldExtract(msg);
+    const gate = await shouldExtract(msg, { cacheOnly });
 
     // Any commitment the message makes in its own right. Ids continue from the
     // committed ledger rather than restarting - see note 3 above.
     const newRows: LedgerRow[] = [];
     let extractModel = "";
     if (gate.hasCommitment) {
-      const extracted = await extractFromMessage(msg, owner);
+      const extracted = await extractFromMessage(msg, owner, { cacheOnly });
       extractModel = extracted.model;
       extracted.commitments.forEach((c, i) => {
         newRows.push(rowFromCommitment(c, baseline.length + i));
@@ -106,7 +110,7 @@ export async function POST(request: Request): Promise<Response> {
     );
 
     const { applied, dropped, model, source } = open.length
-      ? await reconcileMessage(msg, open)
+      ? await reconcileMessage(msg, open, { cacheOnly })
       : { applied: [], dropped: [], model: "", source: "cache" as const };
 
     // Rebuild the ledger with the transitions applied. The baseline is left
@@ -146,6 +150,8 @@ export async function POST(request: Request): Promise<Response> {
       view,
     });
   } catch (err) {
+    if (err instanceof CacheMissError) return spendRefused(err.role);
+
     const message = err instanceof Error ? err.message : String(err);
     const noKey = /NEBIUS_API_KEY/.test(message);
     return Response.json(

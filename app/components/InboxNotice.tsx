@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { appendCallLog, clearApplied, saveApplied, type AppliedReconciliation } from "@/lib/policy";
+import {
+  appendCallLog,
+  clearApplied,
+  demoHeaders,
+  saveApplied,
+  type AppliedReconciliation,
+} from "@/lib/policy";
 import { fmtDate } from "./format";
 
 /**
@@ -51,7 +57,7 @@ export function InboxNotice({
     try {
       const res = await fetch("/api/reconcile", {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json", ...demoHeaders() },
         body: JSON.stringify({ messageId }),
       });
       const payload = await res.json();

@@ -494,7 +494,7 @@ function repairMessages(input: DraftInput, firstBody: string): ChatMessage[] {
 
 export async function generateDraft(
   input: DraftInput,
-  opts: { noCache?: boolean } = {},
+  opts: { noCache?: boolean; cacheOnly?: boolean } = {},
 ): Promise<DraftResult> {
   if (input.quotes.length === 0) {
     throw new Error(
@@ -519,6 +519,7 @@ export async function generateDraft(
     reasoningEffort: "medium",
     maxTokens: 3000,
     noCache: opts.noCache,
+    cacheOnly: opts.cacheOnly,
     schema,
     messages,
   });
@@ -539,6 +540,7 @@ export async function generateDraft(
         reasoningEffort: "medium",
         maxTokens: 3000,
         noCache: opts.noCache,
+        cacheOnly: opts.cacheOnly,
         schema,
         messages: repairMessages(input, body),
       });

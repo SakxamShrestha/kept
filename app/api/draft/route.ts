@@ -17,7 +17,9 @@
  */
 
 import { generateDraft, prepareDraft, type DraftPlaybook } from "@/lib/draft";
+import { liveCallsAllowed, spendRefused } from "@/lib/demo-gate";
 import { loadLedger } from "@/lib/ledger";
+import { CacheMissError } from "@/lib/nebius";
 
 /** The playbook arrives from the client because the viewer can edit it - the
  *  prompt is partly user-authored at request time, which is the point of the
@@ -74,15 +76,22 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: `No ledger row "${rowId}".` }, { status: 404 });
   }
 
+  // An edited playbook is a prompt nobody has sent before, so it cannot be a
+  // cache hit and it is exactly the shape that costs money. The four shipped
+  // playbooks are pre-warmed and answer for everyone.
+  const cacheOnly = !liveCallsAllowed(request);
+
   try {
     const input = await prepareDraft(rowId, pb);
-    const result = await generateDraft(input);
+    const result = await generateDraft(input, { cacheOnly });
 
     // `quoted` is returned as-is. A draft that does not carry its receipt is
     // still shown - the UI says so - because hiding it would mean presenting an
     // ungrounded chase as if it had evidence behind it.
     return Response.json(result);
   } catch (err) {
+    if (err instanceof CacheMissError) return spendRefused(err.role);
+
     const message = err instanceof Error ? err.message : String(err);
 
     // A missing key is the expected failure in a judging window months after

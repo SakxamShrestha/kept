@@ -208,7 +208,7 @@ export interface ReconcileResult {
 export async function reconcileMessage(
   msg: Message,
   open: LedgerRow[],
-  opts: { noCache?: boolean } = {},
+  opts: { noCache?: boolean; cacheOnly?: boolean } = {},
 ): Promise<ReconcileResult> {
   const candidates = await selectCandidates(msg, open);
   if (candidates.length === 0) {
@@ -220,6 +220,7 @@ export async function reconcileMessage(
     reasoningEffort: "high",
     maxTokens: 4096,
     noCache: opts.noCache,
+    cacheOnly: opts.cacheOnly,
     schema: { name: "transitions", schema: SCHEMA as unknown as Record<string, unknown> },
     messages: [
       { role: "system", content: SYSTEM },

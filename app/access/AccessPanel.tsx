@@ -5,7 +5,9 @@ import { Ban, Check } from "lucide-react";
 import {
   DEFAULT_SCOPES,
   loadCallLog,
+  loadDemoToken,
   loadScopes,
+  saveDemoToken,
   saveScopes,
   type CallLogEntry,
   type ScopeState,
@@ -75,12 +77,14 @@ const shortModel = (id: string) =>
 export function AccessPanel() {
   const [scopes, setScopes] = useState<ScopeState>(DEFAULT_SCOPES);
   const [log, setLog] = useState<CallLogEntry[]>([]);
+  const [token, setToken] = useState("");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const sync = () => {
       setScopes(loadScopes());
       setLog(loadCallLog());
+      setToken(loadDemoToken());
       setReady(true);
     };
     sync();
@@ -147,6 +151,45 @@ export function AccessPanel() {
           );
         })}
       </ul>
+
+      <section className="mt-12">
+        <h2 className="text-[1.0625rem] font-semibold tracking-tight">
+          Live model calls
+        </h2>
+        <p className="mt-2 max-w-[58ch] text-[0.8125rem] leading-relaxed text-ink-faint">
+          Every path this demo walks through is already answered from a response cache
+          committed to the repo, so it costs nothing and works for everyone. A request
+          that is not in that cache — an edited playbook, say — has to go to Token Factory,
+          and that spends real credits. Token Factory offers no way to cap that: a budget
+          there alerts but, in their words, does not stop or cap usage. So the one
+          capability held back from the open internet is permission to spend. Paste the
+          token from the submission&apos;s testing instructions and live calls work from
+          this browser.
+        </p>
+        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <label htmlFor="demo-token" className="sr-only">
+            Demo token
+          </label>
+          <input
+            id="demo-token"
+            type="text"
+            value={token}
+            onChange={(e) => {
+              setToken(e.target.value);
+              saveDemoToken(e.target.value);
+            }}
+            placeholder="Demo token"
+            autoComplete="off"
+            spellCheck={false}
+            className="w-56 border-b border-rule bg-transparent pb-1 font-mono text-[0.8125rem] text-ink outline-none focus:border-accent"
+          />
+          <span className="text-[0.75rem] text-ink-faint">
+            {token.trim()
+              ? "Stored in this browser. Live calls allowed."
+              : "Empty — cached answers only."}
+          </span>
+        </div>
+      </section>
 
       <section className="mt-12">
         <div className="ledger-row">
